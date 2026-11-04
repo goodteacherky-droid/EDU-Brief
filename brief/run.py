@@ -76,6 +76,8 @@ def build_materials(c: dict, arts: dict, with_body: bool) -> str:
             if body:
                 lines.append(f"[본문 발췌: {a['source']}]\n{body}")
                 bodies += 1
+    # 요지·본문이 하나도 없으면 제목만으로 요약한 것이므로 화면에 표시
+    c["title_only"] = bodies == 0 and not any(a["snippet"] for a in members)
     return "\n".join(lines)
 
 
@@ -93,7 +95,8 @@ def issue_json(c: dict, arts: dict, brief: dict) -> dict:
         "implication": brief.get("implication", ""), "perspective": brief.get("perspective"),
         "tags": brief.get("tags", []), "score": c["score"], "score_parts": c["score_parts"],
         "streak_days": c["streak_days"], "source_count": c["source_count"], "leans": c["leans"],
-        "official": bool(c.get("official_action")), "sources": sources[:8],
+        "official": bool(c.get("official_action")), "title_only": bool(c.get("title_only")),
+        "sources": sources[:8],
     }
 
 
