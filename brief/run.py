@@ -56,7 +56,7 @@ def fetch_body(url: str) -> str:
         import trafilatura
         raw = trafilatura.fetch_url(url)
         text = trafilatura.extract(raw or "", include_comments=False, include_tables=False) or ""
-        return text[:1800]
+        return text[:1200]
     except Exception:  # noqa: BLE001
         return ""
 
@@ -153,7 +153,7 @@ def main() -> None:
     day = {
         "date": today,
         "generated_at": now.isoformat(timespec="minutes"),
-        "mode": "claude" if os.getenv("ANTHROPIC_API_KEY") and not args.fixture else "fallback",
+        "mode": ("claude" if not llm.ERRORS else "partial") if os.getenv("ANTHROPIC_API_KEY") and not args.fixture else "fallback",
         "site": cfg.get("site", {}),
         "overview": overview,
         "stats": {
@@ -167,6 +167,7 @@ def main() -> None:
             "by_country": dict(Counter(a["country"] for a in used)),
         },
         "failures": failures,
+        "llm_errors": llm.ERRORS,
         "top": [issue_json(c, arts, briefs.get(c["key"], {})) for c in top],
         "sections": [{"field": f, "issues": [issue_json(c, arts, briefs.get(c["key"], {})) for c in lst]}
                      for f, lst in sections.items() if lst],

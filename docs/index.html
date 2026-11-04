@@ -287,10 +287,11 @@ footer ul { margin: 0; padding-left: 18px; }
       el("div", { class: "num" }, el("b", {}, s.articles ?? 0), el("span", {}, "수집 기사")),
       el("div", { class: "num" }, el("b", {}, s.sources ?? 0), el("span", {}, "출처 매체")),
       el("div", { class: "num" }, el("b", {}, s.issues ?? 0), el("span", {}, "묶인 사안")));
-    const order = ["진보", "중도", "보수", "해당없음", "미분류"];
+    const order = ["진보", "중도", "보수", "해당없음"];
     const leans = order.filter((k) => (s.by_lean || {})[k]).map((k) => [k, s.by_lean[k]]);
+    const etc = (s.by_lean || {})["미분류"] || 0;
     $("leanRow").replaceChildren(
-      el("div", {}, el("span", {}, "매체 성향 분포"), el("span", {}, "매체 수 기준")),
+      el("div", {}, el("span", {}, "성향 분류 매체 분포"), el("span", {}, etc ? `지역·인터넷 매체 등 ${etc}곳 별도` : "매체 수 기준")),
       stackBar(leans, leanVar),
       el("div", { class: "legend" }, leans.map(([k, v]) =>
         el("span", {}, el("i", { class: "dot", style: `background:${leanVar(k)}` }), `${k} ${v}`))));
@@ -334,7 +335,9 @@ footer ul { margin: 0; padding-left: 18px; }
     const f = d.failures || [];
     $("foot").replaceChildren(
       el("div", {}, `생성 시각 ${String(d.generated_at || "").replace("T", " ")} · 요약은 AI가 기사 제목·요지를 바탕으로 작성했으므로 중요한 내용은 원문 링크로 확인하세요.`),
-      d.mode === "fallback" ? el("div", {}, "오늘은 AI 요약 없이 간이 규칙으로 정리했습니다(API 열쇠 미설정 또는 호출 실패).") : null,
+      d.mode === "fallback" ? el("div", {}, "오늘은 AI 요약 없이 간이 규칙으로 정리했습니다(API 키 미설정).") : null,
+      d.mode === "partial" ? el("div", {}, "일부 AI 처리에 실패해 해당 이슈는 기사 제목으로 대신 표시했습니다.",
+        el("ul", {}, (d.llm_errors || []).map((x) => el("li", {}, x)))) : null,
       el("div", {}, "매체 성향 표시는 다양성 점검을 위한 참고 분류이며 설정 파일에서 고칠 수 있습니다."),
       f.length ? el("div", {}, `수집 실패 출처 ${f.length}곳`, el("ul", {}, f.map((x) => el("li", {}, `${x.source}: ${x.error}`)))) : null);
   }

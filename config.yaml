@@ -90,8 +90,7 @@ google_news:
 # 2) 매체 직접 RSS — 원문 링크가 바로 붙어 요약 품질이 좋아짐
 #    주소가 바뀌어 수집이 실패하면 화면 하단 「수집 실패 출처」에 표시됩니다.
 rss:
-  - { name: "교육부(정책브리핑)", url: "https://www.korea.kr/rss/dept_moe.xml", region: "domestic", type: "공공기관", lean: "해당없음" }
-  - { name: "한국교육신문", url: "https://www.hangyo.com/rss/allArticle.xml", region: "domestic", type: "교육전문지", lean: "중도" }
+  # 교육부(정책브리핑)·한국교육신문 RSS는 첫 실행에서 접속 실패(주소 변경·해외 접속 차단)로 제외 — 구글 뉴스 검색으로 수집됨
   - { name: "에듀프레스", url: "https://www.edupress.kr/rss/allArticle.xml", region: "domestic", type: "교육전문지", lean: "중도" }
   - { name: "한겨레", url: "https://www.hani.co.kr/rss/society/", region: "domestic", type: "언론", lean: "진보" }
   - { name: "동아일보", url: "https://rss.donga.com/national.xml", region: "domestic", type: "언론", lean: "보수" }
@@ -149,6 +148,12 @@ outlets:
   - { name: "교육플러스", lean: "중도", type: "교육전문지", domains: ["edplus.co.kr"] }
   - { name: "에듀인뉴스", lean: "중도", type: "교육전문지", domains: ["eduinnews.co.kr"] }
   - { name: "베리타스알파", lean: "중도", type: "교육전문지", domains: ["veritas-a.com"] }
+  - { name: "교육언론[창]", lean: "진보", type: "교육전문지", domains: ["educhang.co.kr"] }
+  - { name: "한국대학신문", lean: "중도", type: "교육전문지", domains: ["news.unn.net"] }
+  - { name: "베이비뉴스", lean: "중도", type: "언론", domains: ["ibabynews.com"] }
+  - { name: "경인방송", lean: "중도", type: "언론", domains: ["ifm.kr"] }
+  - { name: "부산일보", lean: "중도", type: "언론", domains: ["busan.com"] }
+  - { name: "국제신문", lean: "중도", type: "언론", domains: ["kookje.co.kr"] }
   - { name: "대한민국 정책브리핑", lean: "해당없음", type: "공공기관", domains: ["korea.kr"] }
   # 해외
   - { name: "The Guardian", lean: "진보", type: "언론", domains: ["theguardian.com"] }

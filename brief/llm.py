@@ -8,32 +8,75 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 
 try:
     import anthropic
 except ImportError:  # pragma: no cover
     anthropic = None
 
+# 새로 만든 API 조직은 분당 입력 토큰 한도가 낮아(약 3만) 한꺼번에 보내면 거절된다.
+# 최근 1분 동안 보낸 양을 어림해 한도에 가까우면 잠시 기다렸다 보낸다.
+ITPM_BUDGET = int(os.getenv("BRIEF_ITPM_BUDGET", "24000"))
+_sent: list[tuple[float, int]] = []
+ERRORS: list[str] = []   # 화면 하단·자료 파일에 남겨 원인 파악에 사용
+
+
+def _pace(est_tokens: int) -> None:
+    while True:
+        now = time.time()
+        _sent[:] = [(t, n) for t, n in _sent if now - t < 62]
+        used = sum(n for _, n in _sent)
+        if not _sent or used + est_tokens <= ITPM_BUDGET:
+            break
+        wait = 62 - (now - _sent[0][0])
+        print(f"[대기] 분당 사용량 조절 {wait:.0f}초")
+        time.sleep(max(1, wait))
+    _sent.append((time.time(), est_tokens))
+
+
+def _estimate(*texts: str) -> int:
+    chars = sum(len(t) for t in texts)
+    return int(chars / 1.6) + 800   # 한글·영문 섞인 글 기준 대략값(넉넉하게)
+
 
 def _client():
     if anthropic is None or not os.getenv("ANTHROPIC_API_KEY"):
         return None
-    return anthropic.Anthropic()
+    return anthropic.Anthropic(max_retries=2, timeout=300)
 
 
 def _call_tool(client, model: str, system: str, user: str, tool: dict, max_tokens: int) -> dict:
-    msg = client.messages.create(
-        model=model,
-        max_tokens=max_tokens,
-        system=system,
-        tools=[tool],
-        tool_choice={"type": "tool", "name": tool["name"]},
-        messages=[{"role": "user", "content": user}],
-    )
-    for block in msg.content:
-        if block.type == "tool_use":
-            return block.input
-    raise RuntimeError("도구 응답 없음")
+    _pace(_estimate(system, user, json.dumps(tool, ensure_ascii=False)))
+    last = None
+    for attempt in range(4):
+        try:
+            msg = client.messages.create(
+                model=model,
+                max_tokens=max_tokens,
+                system=system,
+                tools=[tool],
+                tool_choice={"type": "tool", "name": tool["name"]},
+                messages=[{"role": "user", "content": user}],
+            )
+            for block in msg.content:
+                if block.type == "tool_use":
+                    return block.input
+            raise RuntimeError(f"도구 응답 없음(stop_reason={msg.stop_reason})")
+        except Exception as e:  # noqa: BLE001
+            last = e
+            status = getattr(e, "status_code", None)
+            if status in (429, 529) or (status and status >= 500):
+                wait = 65
+                try:
+                    wait = int(e.response.headers.get("retry-after", 65)) + 2
+                except Exception:  # noqa: BLE001
+                    pass
+                print(f"[재시도 {attempt + 1}/3] {type(e).__name__} {status} → {wait}초 후 다시 시도")
+                time.sleep(wait)
+                continue
+            raise
+    raise last
 
 
 # ──────────────────────────────────────────────────────────────
@@ -70,11 +113,14 @@ GROUP_SYSTEM = """당신은 교육 전문 뉴스 데스크 편집자입니다.
 주어진 기사 목록을 '같은 사건·같은 정책·같은 발표'를 다룬 것끼리 묶습니다.
 규칙:
 - 교육·아동·청소년·학교와 연결되는 사회 이슈만 남기고, 무관한 기사(스포츠, 연예, 주식, 단순 사건사고, 광고성 기사)는 어느 묶음에도 넣지 않습니다.
+- 같은 정부 발표·정책·보고서를 지역별·기관별로 다룬 기사(예: 'A시 선정', 'B군 선정')는 하나의 사안으로 묶습니다.
+- 같은 기업·기관의 같은 발표를 다룬 해외 기사도 매체가 달라도 하나로 묶습니다.
 - 같은 주제(예: '교권')라도 서로 다른 사건이면 따로 묶습니다.
+- 지자체·기관의 단순 홍보성 행사 소식은 학교 현장 관련성이 낮으면 school_relevance를 1로 둡니다.
 - 기사 하나만 있는 사안도 의미가 있으면 1건짜리 묶음으로 남깁니다.
 - field는 반드시 제시된 분야 이름 중 하나를 그대로 씁니다.
 - continues는 '최근 사안 목록'에 같은 사안이 있을 때만 그 key를 적습니다.
-- label은 한국어 명사형으로 씁니다(해외 기사도 한국어로)."""
+- label은 지역명보다 정책·사건 이름이 드러나는 한국어 명사형으로 씁니다(해외 기사도 한국어로)."""
 
 
 def group_articles(cfg: dict, region: str, articles: list[dict], recent_topics: list[dict]) -> list[dict]:
@@ -108,7 +154,9 @@ def group_articles(cfg: dict, region: str, articles: list[dict], recent_topics: 
             out.append(c)
         return out
     except Exception as e:  # noqa: BLE001
-        print(f"[경고] 사안 묶기 실패 → 간이 규칙 사용: {e}")
+        msg = f"사안 묶기({region}) 실패: {type(e).__name__}: {str(e)[:300]}"
+        print("[경고]", msg)
+        ERRORS.append(msg)
         return fallback_group(articles, cfg)
 
 
@@ -208,7 +256,7 @@ def summarize(cfg: dict, items: list[dict]) -> tuple[list[str], dict]:
     if client is None or not items:
         return fallback_summarize(items)
     overview, briefs = [], {}
-    chunk = 8
+    chunk = 5
     for i in range(0, len(items), chunk):
         part = items[i:i + chunk]
         body = "\n\n".join(f"### key={it['key']} | 사안: {it['label']}\n[자료]\n{it['materials']}" for it in part)
@@ -222,7 +270,9 @@ def summarize(cfg: dict, items: list[dict]) -> tuple[list[str], dict]:
             for b in res.get("briefs", []):
                 briefs[b["key"]] = b
         except Exception as e:  # noqa: BLE001
-            print(f"[경고] 요약 실패 → 제목으로 대신함: {e}")
+            msg = f"요약 {i // chunk + 1}묶음 실패: {type(e).__name__}: {str(e)[:300]}"
+            print("[경고]", msg)
+            ERRORS.append(msg)
             briefs.update(fallback_summarize(part)[1])
     for it in items:  # 빠진 항목 보충
         if it["key"] not in briefs:
@@ -233,7 +283,14 @@ def summarize(cfg: dict, items: list[dict]) -> tuple[list[str], dict]:
 def fallback_summarize(items: list[dict]) -> tuple[list[str], dict]:
     briefs = {}
     for it in items:
-        heads = [ln[2:] for ln in it["materials"].splitlines() if ln.startswith("- ")][:3]
+        heads = []
+        for ln in it["materials"].splitlines():
+            if not ln.startswith("- ["):
+                continue
+            title = ln.split("] ", 1)[-1].split(" — ", 1)[0].strip()   # 매체 표시·요지는 빼고 제목만
+            if title and title not in heads:
+                heads.append(title)
+        heads = heads[:3]
         briefs[it["key"]] = {
             "key": it["key"], "title": it["label"], "summary": heads or [it["label"]],
             "implication": "요약 생성 실패 — 원문 링크에서 내용을 확인하세요.",
