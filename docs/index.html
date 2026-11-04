@@ -335,6 +335,7 @@ footer ul { margin: 0; padding-left: 18px; }
   function renderFoot(d) {
     const f = d.failures || [];
     $("foot").replaceChildren(
+      d.replayed_at ? el("div", {}, `이 브리핑은 ${String(d.generated_at).replace("T", " ").slice(0, 16)} 기준으로 ${String(d.replayed_at).replace("T", " ").slice(0, 16)}에 다시 만든 재현본입니다.`) : null,
       el("div", {}, `생성 시각 ${String(d.generated_at || "").replace("T", " ")} · 요약은 AI가 기사 제목·요지를 바탕으로 작성했으므로 중요한 내용은 원문 링크로 확인하세요.`),
       d.mode === "fallback" ? el("div", {}, "오늘은 AI 요약 없이 간이 규칙으로 정리했습니다(API 키 미설정).") : null,
       d.mode === "partial" ? el("div", {}, "일부 AI 처리에 실패해 해당 이슈는 기사 제목으로 대신 표시했습니다.",

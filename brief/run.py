@@ -105,10 +105,17 @@ def main() -> None:
     ap.add_argument("--fixture", help="수집 대신 사용할 기사 JSON 파일")
     ap.add_argument("--date", help="브리핑 날짜(YYYY-MM-DD), 기본값은 오늘(한국 시간)")
     ap.add_argument("--no-body", action="store_true", help="원문 본문 가져오기 생략")
+    ap.add_argument("--until", default=os.getenv("BRIEF_UNTIL") or None,
+                    help="기준 시각(한국 시간, 예: 2026-11-04T05:50). 그 시각에 받았을 브리핑을 재현")
     args = ap.parse_args()
 
     cfg = load_cfg()
-    now = datetime.now(KST)
+    until = None
+    if args.until:
+        until = datetime.fromisoformat(args.until.strip())
+        if until.tzinfo is None:
+            until = until.replace(tzinfo=KST)
+    now = until or datetime.now(KST)
     today = args.date or now.strftime("%Y-%m-%d")
     DATA.mkdir(parents=True, exist_ok=True)
 
@@ -117,7 +124,7 @@ def main() -> None:
         articles = json.loads(Path(args.fixture).read_text(encoding="utf-8"))
         failures = []
     else:
-        articles, failures = collect_all(cfg)
+        articles, failures = collect_all(cfg, until)
     print(f"[1] 수집 {len(articles)}건, 실패 출처 {len(failures)}곳")
 
     arts = {}
@@ -156,6 +163,7 @@ def main() -> None:
     day = {
         "date": today,
         "generated_at": now.isoformat(timespec="minutes"),
+        "replayed_at": datetime.now(KST).isoformat(timespec="minutes") if until else None,
         "mode": ("claude" if not llm.ERRORS else "partial") if os.getenv("ANTHROPIC_API_KEY") and not args.fixture else "fallback",
         "site": cfg.get("site", {}),
         "overview": overview,

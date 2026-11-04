@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "30 19 * * *"   # 매일 한국 시간 04:30 (UTC 19:30)
   workflow_dispatch:         # Actions 화면의 [Run workflow] 버튼으로 바로 실행
+    inputs:
+      until:
+        description: "기준 시각(비워 두면 지금). 지난 시각 재현 예: 2026-11-04T05:50"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -32,6 +37,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          BRIEF_UNTIL: ${{ github.event.inputs.until }}
         run: python -m brief.run
 
       - name: 결과 저장

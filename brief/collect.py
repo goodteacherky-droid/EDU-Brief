@@ -232,14 +232,19 @@ def balance_cap(articles: list[dict], cap: int) -> list[dict]:
     return out
 
 
-def collect_all(cfg: dict) -> tuple[list[dict], list[dict]]:
+def collect_all(cfg: dict, until: datetime | None = None) -> tuple[list[dict], list[dict]]:
+    """until을 주면 그 시각 이전 기사만 남긴다(지난 시각의 브리핑 재현용)."""
     book = OutletBook(cfg.get("outlets", []))
-    since = datetime.now(timezone.utc) - timedelta(hours=cfg.get("window_hours", 30))
+    end = until or datetime.now(timezone.utc)
+    since = end - timedelta(hours=cfg.get("window_hours", 30))
     failures: list[dict] = []
     arts = []
     arts += collect_rss(cfg, book, since, failures)
     arts += collect_naver(cfg, book, since, failures)
     arts += collect_google_news(cfg, book, since, failures)
+    if until:
+        end_iso = until.astimezone(timezone.utc)
+        arts = [a for a in arts if a["published"] and datetime.fromisoformat(a["published"]) <= end_iso]
     arts = dedupe(arts, cfg.get("exclude_keywords", []))
     cap = cfg["diversity"].get("max_articles_per_region", 220)
     dom = balance_cap([a for a in arts if a["region"] == "domestic"], cap)
