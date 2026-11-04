@@ -2,7 +2,11 @@ name: 데일리 브리핑 만들기
 
 on:
   schedule:
-    - cron: "30 19 * * *"   # 매일 한국 시간 04:30 (UTC 19:30)
+    # GitHub 예약 실행은 몰리는 시각(정각·30분)에 늦어지거나 빠질 수 있어
+    # 붐비지 않는 분(7분·37분)에 세 번 걸어 둔다. 먼저 성공한 실행이 있으면 나머지는 건너뜀.
+    - cron: "7 19 * * *"    # 한국 시간 04:07
+    - cron: "37 19 * * *"   # 한국 시간 04:37 (예비)
+    - cron: "7 20 * * *"    # 한국 시간 05:07 (예비)
   workflow_dispatch:         # Actions 화면의 [Run workflow] 버튼으로 바로 실행
     inputs:
       until:
@@ -24,15 +28,36 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: 오늘 브리핑이 이미 있으면 건너뛰기(예약 실행만)
+        id: check
+        if: github.event_name == 'schedule'
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json, os
+          from datetime import datetime, timedelta, timezone
+          now = datetime.now(timezone(timedelta(hours=9)))
+          p = f"docs/data/{now:%Y-%m-%d}.json"
+          skip = False
+          if os.path.exists(p):
+              d = json.load(open(p, encoding="utf-8"))
+              made = datetime.fromisoformat(d.get("generated_at", "2000-01-01T00:00+09:00"))
+              # 오늘 새벽 3시 이후 정상 실행(재현본 아님)으로 만든 브리핑이 있으면 건너뜀
+              skip = (not d.get("replayed_at")) and made.date() == now.date() and made.hour >= 3 and d.get("mode") == "claude"
+          print(f"skip={'true' if skip else 'false'}")
+          EOF
+
       - uses: actions/setup-python@v6
+        if: steps.check.outputs.skip != 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: 패키지 설치
+        if: steps.check.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
       - name: 수집·분석·요약
+        if: steps.check.outputs.skip != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
@@ -41,9 +66,15 @@ jobs:
         run: python -m brief.run
 
       - name: 결과 저장
+        if: steps.check.outputs.skip != 'true'
         run: |
           git config user.name "daily-brief-bot"
           git config user.email "actions@users.noreply.github.com"
           git add docs/data
-          git diff --cached --quiet || git commit -m "브리핑 $(TZ=Asia/Seoul date +%Y-%m-%d)"
-          git push
+          git diff --cached --quiet && exit 0
+          git commit -m "브리핑 $(TZ=Asia/Seoul date +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
