@@ -38,7 +38,7 @@ diversity:
   max_total: 21                 # 하루 브리핑 전체 이슈 상한
   global_share_min: 0.35        # 전체 이슈 중 해외 비율 최소값
   single_source_cap: 2          # 한 매체만 보도한 이슈는 같은 매체에서 최대 몇 건
-  max_articles_per_region: 220  # Claude에게 넘기는 기사 상한(비용 관리)
+  max_articles_per_region: 160  # Claude에게 넘기는 기사 상한(비용·분당 한도 관리)
 
 # ── 이슈도 점수 가중치 (합계 100점 기준) ─────────────────────
 scoring:

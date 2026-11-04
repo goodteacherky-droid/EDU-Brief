@@ -46,7 +46,29 @@ def _client():
     return anthropic.Anthropic(max_retries=2, timeout=300)
 
 
+def _json_from_text(text: str) -> dict | None:
+    """도구 대신 글로 답했을 때 본문 속 JSON을 꺼낸다."""
+    text = re.sub(r"```(?:json)?", "", text)
+    start = text.find("{")
+    while start != -1:
+        depth = 0
+        for j in range(start, len(text)):
+            if text[j] == "{":
+                depth += 1
+            elif text[j] == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        return json.loads(text[start:j + 1])
+                    except json.JSONDecodeError:
+                        break
+        start = text.find("{", start + 1)
+    return None
+
+
 def _call_tool(client, model: str, system: str, user: str, tool: dict, max_tokens: int) -> dict:
+    # 일부 모델은 도구 강제 지정(tool_choice: tool)을 받지 않으므로 자동 선택으로 두고 지시문으로 요청한다.
+    user = user + f"\n\n결과는 반드시 `{tool['name']}` 도구를 한 번 호출해 보고하세요."
     _pace(_estimate(system, user, json.dumps(tool, ensure_ascii=False)))
     last = None
     for attempt in range(4):
@@ -56,12 +78,18 @@ def _call_tool(client, model: str, system: str, user: str, tool: dict, max_token
                 max_tokens=max_tokens,
                 system=system,
                 tools=[tool],
-                tool_choice={"type": "tool", "name": tool["name"]},
+                tool_choice={"type": "auto"},
                 messages=[{"role": "user", "content": user}],
             )
+            texts = []
             for block in msg.content:
-                if block.type == "tool_use":
+                if block.type == "tool_use" and block.name == tool["name"]:
                     return block.input
+                if block.type == "text":
+                    texts.append(block.text)
+            parsed = _json_from_text("\n".join(texts))
+            if parsed:
+                return parsed
             raise RuntimeError(f"도구 응답 없음(stop_reason={msg.stop_reason})")
         except Exception as e:  # noqa: BLE001
             last = e
@@ -139,7 +167,7 @@ def group_articles(cfg: dict, region: str, articles: list[dict], recent_topics: 
         f"[최근 3일 사안 목록]\n{recent_txt}\n\n[기사 목록: id | 매체 | 제목 | 요지]\n" + "\n".join(lines)
     )
     try:
-        result = _call_tool(client, cfg["model"], GROUP_SYSTEM, user, GROUP_TOOL, 12000)
+        result = _call_tool(client, cfg["model"], GROUP_SYSTEM, user, GROUP_TOOL, 16000)
         clusters = result.get("clusters", [])
         valid = {a["_sid"] for a in articles}
         names = {f["name"] for f in cfg["fields"]}
@@ -264,7 +292,7 @@ def summarize(cfg: dict, items: list[dict]) -> tuple[list[str], dict]:
                 (" overview에는 오늘 전체 흐름을 쓰세요." if i == 0 else " overview는 빈 배열로 두세요.") +
                 "\n\n" + body)
         try:
-            res = _call_tool(client, cfg["model"], SUM_SYSTEM, user, SUM_TOOL, 8000)
+            res = _call_tool(client, cfg["model"], SUM_SYSTEM, user, SUM_TOOL, 12000)
             if i == 0:
                 overview = res.get("overview", [])
             for b in res.get("briefs", []):

@@ -20,9 +20,13 @@ class FakeClient:
         self.messages = self
 
     def create(self, **kw):
-        assert kw["tool_choice"]["type"] == "tool"
-        block = types.SimpleNamespace(type="tool_use", input=self.payloads.pop(0))
-        return types.SimpleNamespace(content=[block])
+        assert kw["tool_choice"]["type"] == "auto"
+        p = self.payloads.pop(0)
+        if isinstance(p, str):   # 도구 대신 글로 JSON을 준 경우
+            return types.SimpleNamespace(content=[types.SimpleNamespace(type="text", text=p)], stop_reason="end_turn")
+        think = types.SimpleNamespace(type="thinking", thinking="...")
+        block = types.SimpleNamespace(type="tool_use", name=kw["tools"][0]["name"], input=p)
+        return types.SimpleNamespace(content=[think, block], stop_reason="tool_use")
 
 
 def test_all():
@@ -47,9 +51,7 @@ def test_all():
             {"label": "B 조사", "article_ids": ["d3"], "field": "없는분야", "official_action": False,
              "school_relevance": 1, "continues": None},
         ]},
-        {"overview": ["흐름 1"], "briefs": [
-            {"key": "k0", "title": "A안 발표", "summary": ["가", "나", "다"], "implication": "시사점",
-             "perspective": None, "tags": ["정책"]}]},
+        '결과입니다.\n```json\n{"overview": ["흐름 1"], "briefs": [{"key": "k0", "title": "A안 발표", "summary": ["가", "나", "다"], "implication": "시사점", "perspective": null, "tags": ["정책"]}]}\n```',
     ])
     llm._client = lambda: fake
     cl = llm.group_articles(cfg, "domestic", arts, [])
