@@ -96,7 +96,7 @@ def _article(title, source, url, published, summary, region, country, meta, via)
     }
 
 
-def collect_google_news(cfg: dict, book: OutletBook, since: datetime, failures: list) -> list[dict]:
+def collect_google_news(cfg: dict, book: OutletBook, since: datetime, failures: list, until: datetime | None = None) -> list[dict]:
     gn = cfg["google_news"]
     limit = gn.get("per_query_limit", 25)
     jobs = []
@@ -118,10 +118,14 @@ def collect_google_news(cfg: dict, book: OutletBook, since: datetime, failures: 
         except Exception as e:  # noqa: BLE001
             failures.append({"source": f"구글 뉴스 '{q}' ({country})", "error": str(e)[:120]})
             continue
-        for entry in feed.entries[:limit]:
+        kept = 0
+        for entry in feed.entries:
+            if kept >= limit:
+                break
             pub = _published(entry)
-            if pub and pub < since:
+            if pub and (pub < since or (until and pub > until)):
                 continue
+            kept += 1
             source = clean(entry.get("source", {}).get("title", ""))
             title = clean(entry.get("title", ""))
             if source and title.endswith(" - " + source):
@@ -135,7 +139,7 @@ def collect_google_news(cfg: dict, book: OutletBook, since: datetime, failures: 
     return out
 
 
-def collect_rss(cfg: dict, book: OutletBook, since: datetime, failures: list) -> list[dict]:
+def collect_rss(cfg: dict, book: OutletBook, since: datetime, failures: list, until: datetime | None = None) -> list[dict]:
     out = []
     for src in cfg.get("rss", []):
         try:
@@ -147,10 +151,14 @@ def collect_rss(cfg: dict, book: OutletBook, since: datetime, failures: list) ->
             continue
         meta = {"lean": src.get("lean", "미분류"), "type": src.get("type", "언론")}
         country = src.get("country", "한국" if src["region"] == "domestic" else "해외")
-        for entry in feed.entries[:40]:
+        kept = 0
+        for entry in feed.entries:
+            if kept >= 40:
+                break
             pub = _published(entry)
-            if pub and pub < since:
+            if pub and (pub < since or (until and pub > until)):
                 continue
+            kept += 1
             summary = clean(entry.get("summary", ""))
             out.append(
                 _article(clean(entry.get("title", "")), src["name"], entry.get("link", ""),
@@ -239,9 +247,9 @@ def collect_all(cfg: dict, until: datetime | None = None) -> tuple[list[dict], l
     since = end - timedelta(hours=cfg.get("window_hours", 30))
     failures: list[dict] = []
     arts = []
-    arts += collect_rss(cfg, book, since, failures)
+    arts += collect_rss(cfg, book, since, failures, until)
     arts += collect_naver(cfg, book, since, failures)
-    arts += collect_google_news(cfg, book, since, failures)
+    arts += collect_google_news(cfg, book, since, failures, until)
     if until:
         end_iso = until.astimezone(timezone.utc)
         arts = [a for a in arts if a["published"] and datetime.fromisoformat(a["published"]) <= end_iso]
