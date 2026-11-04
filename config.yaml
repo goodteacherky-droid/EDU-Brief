@@ -1,0 +1,179 @@
+# ─────────────────────────────────────────────────────────────
+#  교육·사회 데일리 이슈 브리핑 — 설정 파일
+#  이 파일만 고치면 분야·출처·선별 규칙을 바꿀 수 있습니다.
+#  (GitHub 웹 화면에서 연필 아이콘 → 수정 → Commit changes)
+# ─────────────────────────────────────────────────────────────
+
+site:
+  title: "교육·사회 데일리 브리핑"
+  subtitle: "국내·해외 교육과 사회 이슈를 매일 아침 정리합니다"
+
+# Claude 모델 (요약·이슈 묶기에 사용)
+model: "claude-sonnet-5-5"
+
+# 몇 시간 이내 기사를 모을지 (새벽 4시 30분 실행 기준, 전날 오전부터)
+window_hours: 30
+
+# ── 분야 ──────────────────────────────────────────────────────
+#  name: 화면에 보이는 이름 / hint: Claude가 분류할 때 참고하는 설명
+fields:
+  - name: "교육정책"
+    hint: "교육부·교육청 정책, 교육과정, 입시, 교원 정책, 교육재정, 학교 제도"
+  - name: "학생인권·생활지도"
+    hint: "학생인권, 교권, 학교폭력, 생활지도, 아동 권리, 민주시민교육"
+  - name: "AI·에듀테크"
+    hint: "인공지능 교육, 디지털 교과서, 에듀테크, 디지털 리터러시, 스마트폰 규제"
+  - name: "사회정서·청소년"
+    hint: "청소년 정신건강, 사회정서학습, 상담, 고립·외로움, SNS 과의존"
+  - name: "특수교육·포용"
+    hint: "특수교육, 장애 학생, 다문화·이주 배경 학생, 기초학력, 교육격차"
+  - name: "사회·복지"
+    hint: "저출생·인구, 아동 빈곤, 돌봄, 지역 소멸, 노동·복지 중 학교와 연결되는 사회 이슈"
+
+# ── 다양성 규칙 ───────────────────────────────────────────────
+diversity:
+  top_issues: 3                 # 맨 위 「오늘의 핵심 이슈」 개수
+  top_min_global: 1             # 핵심 이슈 중 해외 이슈 최소 개수
+  per_field: 3                  # 분야별로 보여 줄 최대 이슈 수
+  max_total: 21                 # 하루 브리핑 전체 이슈 상한
+  global_share_min: 0.35        # 전체 이슈 중 해외 비율 최소값
+  single_source_cap: 2          # 한 매체만 보도한 이슈는 같은 매체에서 최대 몇 건
+  max_articles_per_region: 220  # Claude에게 넘기는 기사 상한(비용 관리)
+
+# ── 이슈도 점수 가중치 (합계 100점 기준) ─────────────────────
+scoring:
+  spread: 45       # 보도 확산도: 서로 다른 매체 수
+  spread_full_at: 8  # 이 수 이상 매체가 보도하면 만점
+  balance: 10      # 진보·중도·보수 등 서로 다른 논조 매체가 함께 보도
+  streak: 15       # 지속성: 며칠째 이어지는 이슈 (하루당 5점)
+  official: 10     # 정부 발표·법안·판결 등 제도 변화
+  relevance: 20    # 학교 현장 관련성 (Claude가 1~3단계로 판단)
+
+# ── 수집 출처 ─────────────────────────────────────────────────
+#  type: 언론 / 교육전문지 / 공공기관 / 연구·국제기구
+#  lean: 진보 / 중도 / 보수 / 해당없음  (매체 성향 분류는 참고용이며 언제든 고칠 수 있음)
+
+# 1) 구글 뉴스 검색 피드 — 여러 매체를 한꺼번에 모아 주는 통로(열쇠 불필요)
+google_news:
+  domestic:          # 한국어판
+    hl: "ko"
+    gl: "KR"
+    ceid: "KR:ko"
+    queries:
+      - "교육부"
+      - "교육청 정책"
+      - "초등학교"
+      - "교권 학생인권"
+      - "학교폭력"
+      - "AI 교육"
+      - "특수교육"
+      - "청소년 정신건강"
+      - "교육격차"
+      - "저출생 학교"
+  global:            # 영어판(지역을 나눠 다양성 확보)
+    editions:
+      - { hl: "en-US", gl: "US", ceid: "US:en", country: "미국" }
+      - { hl: "en-GB", gl: "GB", ceid: "GB:en", country: "영국" }
+      - { hl: "en-SG", gl: "SG", ceid: "SG:en", country: "싱가포르·아시아" }
+    queries:
+      - "education policy"
+      - "schools teachers"
+      - "AI in schools"
+      - "student mental health"
+      - "special education"
+      - "smartphone ban schools"
+      - "OECD education"
+      - "UNESCO education"
+      - "child poverty"
+  per_query_limit: 25
+
+# 2) 매체 직접 RSS — 원문 링크가 바로 붙어 요약 품질이 좋아짐
+#    주소가 바뀌어 수집이 실패하면 화면 하단 「수집 실패 출처」에 표시됩니다.
+rss:
+  - { name: "교육부(정책브리핑)", url: "https://www.korea.kr/rss/dept_moe.xml", region: "domestic", type: "공공기관", lean: "해당없음" }
+  - { name: "한국교육신문", url: "https://www.hangyo.com/rss/allArticle.xml", region: "domestic", type: "교육전문지", lean: "중도" }
+  - { name: "에듀프레스", url: "https://www.edupress.kr/rss/allArticle.xml", region: "domestic", type: "교육전문지", lean: "중도" }
+  - { name: "한겨레", url: "https://www.hani.co.kr/rss/society/", region: "domestic", type: "언론", lean: "진보" }
+  - { name: "동아일보", url: "https://rss.donga.com/national.xml", region: "domestic", type: "언론", lean: "보수" }
+  - { name: "The Guardian", url: "https://www.theguardian.com/education/rss", region: "global", type: "언론", lean: "진보", country: "영국" }
+  - { name: "The Guardian", url: "https://www.theguardian.com/society/rss", region: "global", type: "언론", lean: "진보", country: "영국" }
+  - { name: "BBC News", url: "https://feeds.bbci.co.uk/news/education/rss.xml", region: "global", type: "언론", lean: "중도", country: "영국" }
+  - { name: "The New York Times", url: "https://rss.nytimes.com/services/xml/rss/nyt/Education.xml", region: "global", type: "언론", lean: "중도", country: "미국" }
+  - { name: "The Hechinger Report", url: "https://hechingerreport.org/feed/", region: "global", type: "교육전문지", lean: "중도", country: "미국" }
+
+# 3) 네이버 뉴스 검색 API (선택) — 열쇠를 등록하면 자동으로 켜집니다.
+naver:
+  queries: ["교육부", "초등 교사", "학생인권", "AI 교육", "특수교육", "청소년"]
+  per_query_limit: 30
+
+# ── 매체 성향·유형 사전 ───────────────────────────────────────
+#  구글 뉴스·네이버로 들어온 기사의 매체명을 여기서 찾아 분류합니다.
+#  domains는 네이버 API 결과(원문 주소)에서 매체를 알아낼 때 사용합니다.
+outlets:
+  # 국내 — 진보 성향
+  - { name: "한겨레", lean: "진보", type: "언론", domains: ["hani.co.kr"] }
+  - { name: "경향신문", lean: "진보", type: "언론", domains: ["khan.co.kr"] }
+  - { name: "오마이뉴스", lean: "진보", type: "언론", domains: ["ohmynews.com"] }
+  - { name: "프레시안", lean: "진보", type: "언론", domains: ["pressian.com"] }
+  - { name: "미디어오늘", lean: "진보", type: "언론", domains: ["mediatoday.co.kr"] }
+  - { name: "시사IN", lean: "진보", type: "언론", domains: ["sisain.co.kr"] }
+  - { name: "교육희망", lean: "진보", type: "교육전문지", domains: ["news.eduhope.net"] }
+  # 국내 — 중도·통신·방송
+  - { name: "연합뉴스", lean: "중도", type: "언론", domains: ["yna.co.kr"] }
+  - { name: "뉴시스", lean: "중도", type: "언론", domains: ["newsis.com"] }
+  - { name: "뉴스1", lean: "중도", type: "언론", domains: ["news1.kr"] }
+  - { name: "KBS", lean: "중도", type: "언론", domains: ["kbs.co.kr"] }
+  - { name: "MBC", lean: "중도", type: "언론", domains: ["imbc.com"] }
+  - { name: "SBS", lean: "중도", type: "언론", domains: ["sbs.co.kr"] }
+  - { name: "YTN", lean: "중도", type: "언론", domains: ["ytn.co.kr"] }
+  - { name: "JTBC", lean: "중도", type: "언론", domains: ["jtbc.co.kr"] }
+  - { name: "한국일보", lean: "중도", type: "언론", domains: ["hankookilbo.com"] }
+  - { name: "서울신문", lean: "중도", type: "언론", domains: ["seoul.co.kr"] }
+  - { name: "경기일보", lean: "중도", type: "언론", domains: ["kyeonggi.com"] }
+  - { name: "경인일보", lean: "중도", type: "언론", domains: ["kyeongin.com"] }
+  # 국내 — 보수 성향
+  - { name: "조선일보", lean: "보수", type: "언론", domains: ["chosun.com"] }
+  - { name: "중앙일보", lean: "보수", type: "언론", domains: ["joongang.co.kr"] }
+  - { name: "동아일보", lean: "보수", type: "언론", domains: ["donga.com"] }
+  - { name: "문화일보", lean: "보수", type: "언론", domains: ["munhwa.com"] }
+  - { name: "세계일보", lean: "보수", type: "언론", domains: ["segye.com"] }
+  - { name: "국민일보", lean: "보수", type: "언론", domains: ["kmib.co.kr"] }
+  - { name: "매일경제", lean: "보수", type: "언론", domains: ["mk.co.kr"] }
+  - { name: "한국경제", lean: "보수", type: "언론", domains: ["hankyung.com"] }
+  - { name: "서울경제", lean: "보수", type: "언론", domains: ["sedaily.com"] }
+  - { name: "TV조선", lean: "보수", type: "언론", domains: ["tvchosun.com"] }
+  - { name: "채널A", lean: "보수", type: "언론", domains: ["ichannela.com"] }
+  # 국내 — 교육전문지·공공
+  - { name: "한국교육신문", lean: "중도", type: "교육전문지", domains: ["hangyo.com"] }
+  - { name: "에듀프레스", lean: "중도", type: "교육전문지", domains: ["edupress.kr"] }
+  - { name: "교육플러스", lean: "중도", type: "교육전문지", domains: ["edplus.co.kr"] }
+  - { name: "에듀인뉴스", lean: "중도", type: "교육전문지", domains: ["eduinnews.co.kr"] }
+  - { name: "베리타스알파", lean: "중도", type: "교육전문지", domains: ["veritas-a.com"] }
+  - { name: "대한민국 정책브리핑", lean: "해당없음", type: "공공기관", domains: ["korea.kr"] }
+  # 해외
+  - { name: "The Guardian", lean: "진보", type: "언론", domains: ["theguardian.com"] }
+  - { name: "The New York Times", lean: "중도", type: "언론", domains: ["nytimes.com"] }
+  - { name: "The Washington Post", lean: "중도", type: "언론", domains: ["washingtonpost.com"] }
+  - { name: "BBC", lean: "중도", type: "언론", domains: ["bbc.co.uk", "bbc.com"] }
+  - { name: "Reuters", lean: "중도", type: "언론", domains: ["reuters.com"] }
+  - { name: "AP News", lean: "중도", type: "언론", domains: ["apnews.com"] }
+  - { name: "NPR", lean: "중도", type: "언론", domains: ["npr.org"] }
+  - { name: "The Economist", lean: "중도", type: "언론", domains: ["economist.com"] }
+  - { name: "The Straits Times", lean: "중도", type: "언론", domains: ["straitstimes.com"] }
+  - { name: "CNA", lean: "중도", type: "언론", domains: ["channelnewsasia.com"] }
+  - { name: "The Telegraph", lean: "보수", type: "언론", domains: ["telegraph.co.uk"] }
+  - { name: "The Times", lean: "보수", type: "언론", domains: ["thetimes.co.uk"] }
+  - { name: "The Wall Street Journal", lean: "보수", type: "언론", domains: ["wsj.com"] }
+  - { name: "Fox News", lean: "보수", type: "언론", domains: ["foxnews.com"] }
+  - { name: "Education Week", lean: "중도", type: "교육전문지", domains: ["edweek.org"] }
+  - { name: "The Hechinger Report", lean: "중도", type: "교육전문지", domains: ["hechingerreport.org"] }
+  - { name: "Chalkbeat", lean: "중도", type: "교육전문지", domains: ["chalkbeat.org"] }
+  - { name: "The 74", lean: "중도", type: "교육전문지", domains: ["the74million.org"] }
+  - { name: "Schools Week", lean: "중도", type: "교육전문지", domains: ["schoolsweek.co.uk"] }
+  - { name: "OECD", lean: "해당없음", type: "연구·국제기구", domains: ["oecd.org"] }
+  - { name: "UNESCO", lean: "해당없음", type: "연구·국제기구", domains: ["unesco.org"] }
+  - { name: "UNICEF", lean: "해당없음", type: "연구·국제기구", domains: ["unicef.org"] }
+  - { name: "World Bank", lean: "해당없음", type: "연구·국제기구", domains: ["worldbank.org"] }
+
+# 제외 키워드 (제목에 들어 있으면 수집 단계에서 뺌)
+exclude_keywords: ["프로야구", "연예", "아이돌", "주가", "코인", "부고", "오늘의 운세", "horoscope", "football", "NFL"]

@@ -1,0 +1,43 @@
+name: 데일리 브리핑 만들기
+
+on:
+  schedule:
+    - cron: "30 19 * * *"   # 매일 한국 시간 04:30 (UTC 19:30)
+  workflow_dispatch:         # Actions 화면의 [Run workflow] 버튼으로 바로 실행
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 패키지 설치
+        run: pip install -r requirements.txt
+
+      - name: 수집·분석·요약
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python -m brief.run
+
+      - name: 결과 저장
+        run: |
+          git config user.name "daily-brief-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data
+          git diff --cached --quiet || git commit -m "브리핑 $(TZ=Asia/Seoul date +%Y-%m-%d)"
+          git push
