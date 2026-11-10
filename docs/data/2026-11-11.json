@@ -1,0 +1,2085 @@
+{
+ "date": "2026-11-11",
+ "generated_at": "2026-11-11T05:24+09:00",
+ "replayed_at": null,
+ "mode": "claude",
+ "site": {
+  "title": "교육·사회 데일리 브리핑",
+  "subtitle": "국내·해외 교육과 사회 이슈를 매일 아침 정리합니다"
+ },
+ "overview": [
+  "구글이 학교용 AI 기능과 검색 서비스를 묶어 제공하는 방침을 두고 미국 상원의원이 개선을 요구함",
+  "AI 교육 도입이 확대되면서 지침 마련과 교사 연수가 각국의 과제로 부각됨",
+  "국내외에서 교육재정 압박이 이어지며 예산 편성·재정 개편 논의가 진행되고, 교사 확보·양성 지원책도 다수 발표됨"
+ ],
+ "stats": {
+  "articles": 320,
+  "sources": 309,
+  "issues": 107,
+  "domestic": 160,
+  "global": 160,
+  "by_lean": {
+   "보수": 8,
+   "미분류": 277,
+   "중도": 19,
+   "진보": 3,
+   "해당없음": 2
+  },
+  "by_type": {
+   "언론": 300,
+   "교육전문지": 7,
+   "연구·국제기구": 2
+  },
+  "by_country": {
+   "미국": 54,
+   "영국": 8,
+   "싱가포르·아시아": 4,
+   "한국": 47
+  }
+ },
+ "failures": [],
+ "llm_errors": [],
+ "top": [
+  {
+   "key": "2026-11-11-g00",
+   "region": "global",
+   "field": "AI·에듀테크",
+   "title": "구글 AI 검색 연동 논란과 마키 의원 요구",
+   "summary": [
+    "구글이 학교에 AI 검색 기능 사용을 사실상 요구해 논란이 일어남",
+    "시카고 공립학교는 학생 계정에서 생성형 AI를 차단했고, 구글이 검색 접근 차단 가능성을 언급함",
+    "마키 상원의원은 AI만 끄고 검색은 유지할 수 있도록 구글에 요구함"
+   ],
+   "implication": "학생 계정의 AI 기능 설정 범위를 점검하고, 검색과 AI가 분리되는지 확인할 필요가 있음",
+   "perspective": null,
+   "tags": [
+    "구글",
+    "생성형AI",
+    "학생계정"
+   ],
+   "score": 80.0,
+   "score_parts": {
+    "확산도": 45.0,
+    "논조 폭": 0.0,
+    "지속성": 15,
+    "공식성": 0,
+    "현장 관련성": 20.0
+   },
+   "streak_days": 8,
+   "source_count": 9,
+   "leans": [],
+   "official": false,
+   "title_only": true,
+   "sources": [
+    {
+     "source": "NBC 7 San Diego",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVFhheVhfYlNhWGxGLUNsSzZmakNLY0hHUjBsRm9CQ1ZyUXd6TTNkbVZtdXcxck9SZ2thaHhhQUJJM2xYOXZ3b1M5dzUtdE1ER2NFWW5VTmdVRjVCUUVfRG44SW5MNzR5d3FSaXUzT1lwb0EwLWI3dnFpQlJzbHpPWjl6eFNfLU1aR0NDQUJVQzlvX3o1XzlzU0p3NGh2cjIwNVlhcVhrWDVycVhzdFk3cNIBuAFBVV95cUxPYms3eFJIWmgxT2p2UjdETldlcDZra3M4bjFLOVI2NHdPY0tXY3dRYjQ4MnV5eVZzTUdiVWNhd3J2cUJZamFic0E1emlXWWlTa00wNTdvVGJJTG5ZMVNMcURvT2J1eUNOaTk5Mnk5RE82N2FUX1g0aFY5YXpGMUVZSllvbmc5R2g4QW5CaUgxT2FtYnpXbFJ6aUJEWUU4dWJKcV9aQ01uOExHVDNtdHdtYjdvZzRoR0xl?oc=5",
+     "title": "Google issues ultimatum to San Diego County schools: use AI search or be cut off"
+    },
+    {
+     "source": "MIXED News",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "영국",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNVRiMkl3R2FwV1Q1V0NPVEttTExSNHQyekU0WHAwLVVGWmxsYUZocHpGd0JCb3RRMjdlN0VxQThEMDZodHNvZlJZeENCd2w0MWEyMU0tdks5T3pUVXQ5T09kRnpCcGxVS2FNX0txeTUyakNWZTg5LXlwZmdmWkl3V0gyMWcwU210NDF6RA?oc=5",
+     "title": "Google will let schools switch off Gemini, but AI still comes with Search"
+    },
+    {
+     "source": "The Boston Globe",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZzdYOExBUnlYVjk1bXkzUlpnWm5vMlQxRnlxWVJJYXYxS3VubHZwbV8tbTJOdzdSUjU0MXNsSGVYbXdnaE5iV3VXYlNhNkJVeU9JRFM1S3dOb212UzJGRXkyVmZ2SmlhNWlJZVd0QzZPV3VVTUdtQ0h1eVJYUVh2RkdSOTF2TnM5U0s1VVlR?oc=5",
+     "title": "Opinion | Google to AI-averse schools: We’ll our take our ball and go home"
+    },
+    {
+     "source": "The Hindu",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "싱가포르·아시아",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRUpoWndhLW9QQllWeFRFclloajlvWGN0UHFaTklEQkRnM1laYXdmNDZYRlk2UWxGVjlCOFFqRElVWmRtakRRWVBNYjFDVGpiVFJuWFFjN1NXb040MG1OYjBJekxKMUVUNWFrR3BGS2FxVVlTYUxHNGEtYjlqNXctS0pCMThQQWtuLTAyZTlWMUZwclNoVG5NVGlEWFV5ZlJ5UDhoR2N4UFJxWlU0dmtLNzIzWGxvaURyRmtqakJKbWJ6TGFEallxMdIBzwFBVV95cUxPVDVWanNaa3FuVWU0YVdrZGhDNUdyamVXOWpKRUo3Zjg0MXZpMEJXcUpxNHAzZGJQcEdYTFVCUE1QSFc1elQ5TDdhck51Umc1OS1JQW1OVk93N0FXLXk1akNwZDNJNWp2dTdzYnp4WmQweDlyWlNKNUo0TmNBNElwQVN6OUlOdVRwYjhFUmJBMDk3R2NOSHBLNUJsZDR3ZDNFTmp6VHNPS29lZmtNWkpBWndCdjRuV1FvRmdYRTgxRzh6MkI2UGpha0NFN0hBTWM?oc=5",
+     "title": "Google’s controversial Search and AI policy for schools | Explained"
+    },
+    {
+     "source": "The Defiant",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "영국",
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOYjk1WUxNNUd1SC1TaGFnN3FVekR5Q1Z3RnFqNWl3VEFLNTYzbDkwZWQ5NFlFeU5lZEdFeDg3YlRfbkNTUU5oc1VseVNuc1FlU1lnVDlpOWtaVmVpS0ROWnMzc3lJSHNIeFlyeEZnZG4wa3VXZmJUNjRCLVFya21KcVNwY0VteTBrd0F1S1Q0NjV1RUk?oc=5",
+     "title": "Markey Demands AI-Free Google Search Option for Schools"
+    },
+    {
+     "source": "Benton Institute for Broadband & Society",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUm4ydjAyR25lbkdXcjItNUsxUEs4UFdDazlKdlJPNE82Z3pubm9nemdvdVpYdFBXQlI5TjhzVFgtV2hkbmFvZmIyQ1FWRkdDUE9qYWxmS2Rfb0VGNXJhMFRDSG4zblN2Y2NTQ0cwaFVHRFRiZ2stUUpDWWNDdXhGa0U3V2RCeEVPYWJwSUhra3B1emJWSWdEUTh2eGlmSjFmQkxWLUJYbERJa19zNHJoY05lNzkyMTJQdEpJa2RVLWQ?oc=5",
+     "title": "Sen Markey Demands Google Allow Schools to Disable AI Services Without Blocking Search Access"
+    },
+    {
+     "source": "University Herald",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVVlyRHVMeGNDUTRJTUh5ajZLZy1jUWlMM0hUWUdGUFFqU1BQRGhTeXZLTno0U0ZXUUhBY09jNDd0RjcxSFZXNlBKeDlQZ2ZtR0pva2MyTHhCT1RnanZyV1hZWVJYZVpYRWFnczhMWFJMbWVpajA1QURtemUyR3VvaEdLOThZTVozM216WkN5MDROTTZINWhDUU52cGcyMkFYZ2VTSENyVUJENVpCZjVQSVh6dHI0TTZmQzhpN0hiQ1UzdlQtQUprMmF1TQ?oc=5",
+     "title": "Senator Markey Pressures Google to Let Schools Disable AI Features in Search"
+    },
+    {
+     "source": "www.techtimes.co.uk",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "영국",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemx5dFZPUWtGdlNkaWtGamw2RUxIMEV5VFJHQ0pNS0lkNnpKbTRQZDZyYUFPQkxVOWJnb2NxQmNubzFDbGNuX1JqS2UtdTI3Y2hNWG94YU14TXd4OWowMHBuTTNYcWtyV3IzdUREMWxaWjZldUdCQ1hFTGdiSWx4c0xIbzVDQjJY?oc=5",
+     "title": "US Senator Urges Google to Let Schools Block AI Without Losing Search Access"
+    }
+   ]
+  },
+  {
+   "key": "2026-11-11-g09",
+   "region": "global",
+   "field": "AI·에듀테크",
+   "title": "AI 교육 도입 확대와 지침·교사 연수",
+   "summary": [
+    "덴버·오로라 학교가 AI 도구 도입에 35만 달러를 지원받게 됨",
+    "유네스코가 나이지리아 바옐사주 교사 1,445명에게 AI·디지털 교수법 연수를 실시함",
+    "오픈AI는 교육 분야 AI 지침의 공백을 다룬 글을 냈고, 교사 대상 무료 AI 제공의 선례 문제를 지적하는 기고도 나옴"
+   ],
+   "implication": "AI 활용 지침과 교원 연수 체계를 학교 차원에서 갖추고 도구 도입 기준을 마련할 필요가 있음",
+   "perspective": null,
+   "tags": [
+    "AI교육",
+    "교사연수",
+    "지침"
+   ],
+   "score": 80.0,
+   "score_parts": {
+    "확산도": 45.0,
+    "논조 폭": 0.0,
+    "지속성": 15,
+    "공식성": 0,
+    "현장 관련성": 20.0
+   },
+   "streak_days": 6,
+   "source_count": 10,
+   "leans": [],
+   "official": false,
+   "title_only": true,
+   "sources": [
+    {
+     "source": "GovTech",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "싱가포르·아시아",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOFMweHN4OGwyNGNZaTU3Uk9YZmxmNWJ3Tmc0WUg3ZzdJVGhKNEtTTUxILUw3bzhDdUtYU2JmNVdGZVRSM040UGJoT0IyUUZEVUZMajI0Tnh0dWRFS0VKWGpYM3NpenV1Z2M0MjlIdndfa1lJLXlVRkwxdzhEMWpBZ25IcTZ1Qk13bzZZZlVEWnVNbDBXTk9wTkxn?oc=5",
+     "title": "Opinion: Free AI for Teachers Sets a Dangerous Precedent"
+    },
+    {
+     "source": "OpenAI",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9PY2czTVhLaWY0UXdZVW9LX2Rpai1fSlY5d2M4Vm9OeFNHR01YZGlnd3czdzQwMnRxQW5ybHpIUXJGMU1VYWc0Z2ZfcWdaYnpvOXlmQU9MRDRFNzBJRFc3cEt3aVlsenhkb2pB?oc=5",
+     "title": "Closing the AI guidance gap in education"
+    },
+    {
+     "source": "BigGo Finance",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "영국",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9xUUxnZ3ZVOXByNjZaLVp3cWVOSlNYZTNQMWk4OUN2VXZnR3FiM3lUblhkTFZyU08xLTlZTGJrdjVjWlR3VDJrOWwyVDU3cDdudTdCd3gweEVXVkNVSjBaNVRRam5NUTdYSURFc1R4Sy1zYi0zVkE?oc=5",
+     "title": "Chen Lin Leaves ByteDance to Start Again, AI Education Venture \"Xiaolu Aixue\" Emerges"
+    },
+    {
+     "source": "UNESCO",
+     "lean": "해당없음",
+     "type": "연구·국제기구",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZWpUYjQxeWRkTzhWUkhJa2tXUlRRRGd5aUxNYUZtRkdYbFkzMFpBODVJT0RJdUZETF9OWWNScXFMQld0b1EwRUE3WENMeXlRd1FTcEJpNXYxMHFQV2NfS19CeHdhOVI4SVRJN01udm9RWmFjX0MtUU9vVTJ4MTVwT0RiaE9LMDd3YTB2V3BhYXcwc1F3WGJfZ0pGZWwwaVF4WkZLczZJVzhhLXNCLTg3OVhhaDkxLW14bEE?oc=5",
+     "title": "AI Answers. You Decide: UNESCO launches a new Media and Information Literacy curriculum"
+    },
+    {
+     "source": "Peoples Gazette Nigeria",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMGZUTVRnSE9TczZIM3JjblVncWIyR1lpNk9qN2NIcXJWWTR0TlNiYkluRFZoRG52OFZxX25aVHdqWU53NTJFZGFSUWNEMWZIUHJpRnlnaUQ1a2IxeEFfdHdZS241WE11YXBRZGJFeURVb2lDLXUwRm5NN004OHZTaXNFWWxFdllzTlE?oc=5",
+     "title": "UNESCO trains 1,445 Bayelsa teachers in AI, digital pedagogy"
+    },
+    {
+     "source": "JournalArta",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "싱가포르·아시아",
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORnRsbGRyWS1Gb2tuME40cFBaakswQkdSVmtOYWR3TmVzSjY2NkNVcURRQUZhWTVDS2NTQkR4ZThjRl85amdHcXVReXU0VExPR0xMSjdhbW1Uenp5Y254YzRQRVhsSTgxdGdSeWdzTzk1amFaMHFOUGtPek82aVV0Q2IxOV9fWm1pYmptdEpTd0J3ZUU?oc=5",
+     "title": "South Korean City Adopts \"Great Books\" Model as AI Spreads in Schools"
+    },
+    {
+     "source": "Freedom Online",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMkZQUmlOUXdLMnZoWERQblZLNzVqMXlaOVZSa3lSR3RKMnlGUVhCUVV0VUZSRjAwUG1ZNUVWUUw0UmNNZFZFQUgwWWlRN21CaG0xUGpCMzFZWmRTb2t3eXBtZ1FPWExJS1RVMmc1b0FZb1dSbGxDQjhlNFVXdzlNaUNzUHZ0ZmJTSGFmSHFOVWlvamlr?oc=5",
+     "title": "UNESCO to Train 1,445 Bayelsa Teachers in AI, Digital Pedagogy"
+    },
+    {
+     "source": "The Santa Barbara Independent",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOSWFKUmY4QnBrTHJNeDVtZTNKT0NoU2YzVDVnb2hVaDB6eWV6dlVyWDZRYUZUbWR4VlZIMHAzYTNlQzFzeDlxYi1yMV9YSnRiQ0hucVQta2trTjFqTU9BQUpYU21jNEJWczN2QWpuY3lIcFY2TUxyY1F5Z0hCbk15UXJvWFgzTTcwa1BWRktpbkhZcjJkNzdQeWEwRzV1ZGZaaERDZExsNEtmQXRNbkpadGpYc0xPS01rN0VYSW9qeUp0N01vckljclZ0NEs0eXFVVnk4RkVGcnd2SFBWdVVlUTloTUkyaERjWTc0NjB6RW9BSDFZcGtvS3VEenVUYXc?oc=5",
+     "title": "State Superintendent Tony Thurmond Convenes Summit on AI in Education, Emphasizes Innovation, Student Safety, and Educator Leadership"
+    }
+   ]
+  },
+  {
+   "key": "2026-11-11-g28",
+   "region": "global",
+   "field": "교육정책",
+   "title": "미국 교사 인력 확보·양성·멘토링 동향",
+   "summary": [
+    "미시간주가 200여 개 교육구의 신규 교사 멘토링에 약 1,000만 달러를 지원함",
+    "뉴멕시코주는 교사 결원이 크게 줄었다는 보고서가 나왔고, 인디애나 볼주립대는 코칭 자료센터 설립 보조금을 받음",
+    "호주 매체는 예비 교사 대상 대학 내 웰빙 교육 필요성을 다룸"
+   ],
+   "implication": "신규 교사 멘토링과 웰빙 지원 방안을 학교 단위 초임교사 지원에 참고할 만함",
+   "perspective": null,
+   "tags": [
+    "교사양성",
+    "멘토링",
+    "교원수급"
+   ],
+   "score": 80.0,
+   "score_parts": {
+    "확산도": 45.0,
+    "논조 폭": 0.0,
+    "지속성": 15,
+    "공식성": 0,
+    "현장 관련성": 20.0
+   },
+   "streak_days": 6,
+   "source_count": 8,
+   "leans": [
+    "중도"
+   ],
+   "official": false,
+   "title_only": true,
+   "sources": [
+    {
+     "source": "SIU News",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ2taZktGT1JJR2wwR29nU0VHY1cxMl95OWhiMXp3c19OQmh2TlFYLU5HdDF5T3g1dE40LWxNTGlCOHItOHlIVjVNNWFWWUNxWm5nNUlSd3JtRTgyY2VmXzVNdzd4T3h6M2NYdjQ3NnYxLThsX0doSDk5dU41TkFQVEZFRWZVTUUwc1ZUVWNDQVdKYTdRYlo0bWhKdXNKZEU0SE5GSXNPVTlUbDc0?oc=5",
+     "title": "Hundreds of students coming to SIU for Future Teachers Day on Nov. 13"
+    },
+    {
+     "source": "WWMT",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaWtuQ1lTb3dYUW90SU5oUktFVGV6M05IeXV3Y3kyclY2azNHa0M3bUFSak9sSWhYYkliX25PLVJmMGx0YkFPMnZTSUNFdXV5ZDZ3cWVPSjQ0TEd3U09sYmVLdG5zcTdWdy1JeFVtV1BxeVFXVHNBNkNWSkZlT0FrSkYxNm5heXZaOUE0aU9lZWo1SEJmX3MwVnZSYi0xVWszekdzaU5SelJYQUQwTmVmMENNVUg3UjJQbFBFVU1XSkJiQXMyRnY4eEpB?oc=5",
+     "title": "Michigan awards nearly $10 million to help 200-plus districts mentor new educators"
+    },
+    {
+     "source": "Auburn University",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQTURBS2wtMkdrbzZWaVBHOWF3R19FYURpb0hVdGRrN29oU0hmLWFoXzNZUDBYWlZxR3NHeU5wUHc2VkR0TUtqUEZFUmY2VFJadVdHMGtYU2lGUHp2QV9GU2RHZ3E1WUItSVR3UDZSd0dtWW5TQURLTldLSUNkWE5OZmpGbzZVR1BsRUxQTi10V0cxZ2E1U190S1V0Mi1vUnlBeWYxQmhBUjFWVEEyZmNiX2tLb0FsYmdtbFo5N05tSFA1UG1qOXk4Qm1sQlo1WGs?oc=5",
+     "title": "Auburn's College of Education equips future teachers to support multilingual learners"
+    },
+    {
+     "source": "New Mexico State University",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOeG1qQlVFUXNoY3ltMXZmeHE1UERSOW1WR2VLWUhOOGhpWDdnRVhScDlZWUloaVNEY2JfbE1iX0psT0MwUno2ODlKWWkyT1kzVWNZREpqbWRZeVVtU1NWUHBNSlVTejBNc25neFFtYVJSaVMyTlotUkVvbWh3eHBxUW9BS2ZUUXEzU0FuYTNnUGZUWlctbHhpQXdWVV9wVlpNTVRsX1JzLUtxTGpkSDA0N3YwQlI5X3IxRm1QdTBwS3dGQjBxSjNvS0F5MGdkSnd0?oc=5",
+     "title": "NMSU report finds New Mexico teacher vacancies down significantly"
+    },
+    {
+     "source": "Ball State University",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGU0NmNCaEJiOUdhbC02N3QtbHRzSUwtNk1FU214V3hNZDhFT2tiNG5yR2hVUFp1ejRwMU5nNkxXNDlYbGNZcVZSOW1QMDJhV2IxNkdHVzNRMDdrT0lEaFRzVllMajlXN3Bya29Pa1piSHBick5tM0wzZkhKOGN4NmdjNUJyWG1pek5fV3lEYWQ0R2FrX0hGTllncHhzbk4xOFB0OGFFVFdvd014R3E3b1BPS1JicVdOckVIV1JWdjZPb1VZMWRtTV9iX05pZmdWTldF?oc=5",
+     "title": "Ball State University Receives Grant to Establish Indiana Coaching Resource Center"
+    },
+    {
+     "source": "UA News Center",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObUdFcUY3UnBselE1M2lCRmlYRjdORXRhZFZVZlIzNldhc2RoZGtfbG1iWkowYkk0ajZPUjNmU1FLbk93Q3RoeDdjSWQ3MzFfMHluSHRiUUxGeHRvTkthVklHbGJiQ0NZdG1aTmJZS2Vtb1o5Q2plZ1JZMEoxa2dKSTBOMjJzcjZ5RmpKWXVFT0NMT05ERDdtQw?oc=5",
+     "title": "UA education students lead the way for Alabama’s future educators"
+    },
+    {
+     "source": "The Educator",
+     "lean": "미분류",
+     "type": "언론",
+     "country": "영국",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNFQ0eVV0NWxKMG5WWk9CYkRjZ2lkdlJnMzRwbHJJVjJ4N0xfcTV1enlONUY3TmN5eGFFMTVMTVNtVURXQVJKMjQ0cWNyVXZEOXVBd19vTEJCd05ybUtvSjZpOU82YjY4a0l2YVFlQzVoREs4WWxhSnZnZWhrYkM2R3I0RzBJVXlEeU9ETmpMZGZGR0k1cC1jVjFWOGs3NURPUG1QcUdYbGxuRmQ4?oc=5",
+     "title": "New teachers need wellbeing training at university – report"
+    },
+    {
+     "source": "BBC",
+     "lean": "중도",
+     "type": "언론",
+     "country": "미국",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxObUI0ZHdkT1NwNVZRSE5id0xyYTZMcDE2UFRVY0IxZGY1b2FkYTRVWFNNUVhUdVplai01ZVhDb3MtdkZnRXF5VVlPMnd2a2FwaWtPb09nc19JSXNMcWh1ZThEQ2dWV0w0VGFwR2lOQUc0aWFBVm9HZGtMb3Z2TlZweW5GYnZNM2dUNUxlY2FreTdfZjFITzhnVXFCYkhEWEdKMTBMZE16VGhib1dU?oc=5",
+     "title": "Georgia's BEST Helps Nearly 100 Cobb Educators Earn Doctoral Degree at No Cost!"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "field": "교육정책",
+   "issues": [
+    {
+     "key": "2026-11-11-d08",
+     "region": "domestic",
+     "field": "교육정책",
+     "title": "세종교육청 2027년 본예산 1조 2060억 원",
+     "summary": [
+      "세종시교육청이 내년 본예산을 1조 2060억 원으로 편성했고, 전년 대비 2.1% 증가함",
+      "교직원 인건비 302억 원이 부족하고 필수 경비 436억 원은 추경으로 돌림",
+      "60개 사업을 정비하는 선택과 집중 방식이며, 진로탐험대 사업이 다시 쟁점이 될 가능성이 제기됨"
+     ],
+     "implication": "사업 정비와 필수 경비 추경 편성이 학교 운영비와 교육활동 사업에 미칠 영향을 살필 필요가 있음",
+     "perspective": null,
+     "tags": [
+      "세종교육청",
+      "본예산",
+      "교육재정"
+     ],
+     "score": 75.0,
+     "score_parts": {
+      "확산도": 45.0,
+      "논조 폭": 0.0,
+      "지속성": 0,
+      "공식성": 10,
+      "현장 관련성": 20.0
+     },
+     "streak_days": 1,
+     "source_count": 11,
+     "leans": [
+      "진보"
+     ],
+     "official": true,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "세종의소리",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBFdkdaUEVpTWZFSkFuUWh1UVFXY0ttRVg0N3MyYTNZcGh5enFwajg2cEwtY2tUZ2ZJOWVPdjhLUnhHNnZZYjJuSllwZ1BVSnhCRTlCUmlGM0Q4YXAyaUxfV0t4M0o5Y1U?oc=5",
+       "title": "교직원 인건비 302억원 ‘부족’… 세종교육청도 ‘재정난’"
+      },
+      {
+       "source": "뉴데일리 충청세종",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1qWGE2VEkzV0E5VERLZ05KcExBMUsxY1EzLUxTT3VEOTBnbWdleHVEYkJzR00xRW5rQkpFSFBfVWhfc2k4SnFCTWI0cG4wRXhVRWJCaTQyR2RFcGZUblk3ZFo3U3R3X3Jwak56Mm1JLXFjWkhoUHpBZlh6QzdpWHPSAX9BVV95cUxNalhhNlRJM1dBOVRES2dOSnBMQTFLMWNRMy1MU091RDkwZ21nZXh1RGJCc0dNMUVua0JKRUhQX1VoX3NpOEpxQk1iNHBuMEV4VUViQmk0MkdkRXBmVG5ZN2RaN1N0d19ycGpOejJtSS1xY1pIaFB6QWZYekM3aVhz?oc=5",
+       "title": "세종교육청, 내년도 본예산 1조 2060억 원 편성"
+      },
+      {
+       "source": "디트NEWS24",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE51UkgxN19JOUpELVQtRFVTb3RfWEJVcDVUM1NlNFpZeFU5Zl8tSEtxRmxtMjRpSmpYZ05jcDg1bmVtZHFvVndXalU0cGRlbnlnVVBKSHQwbUFNb0lGcW1LSHRaUVpmc1k2UHJN?oc=5",
+       "title": "세종시교육청, 내년 예산 1조 2060억 편성… 필수 경비 436억 추경으로"
+      },
+      {
+       "source": "충청게릴라뉴스",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5YZ3VRTmZGdVYzTVB5NTVrRlhlUU40alQyWGhTbkNvQ25zTjdmV0RNdENtNkJuX05JcHRsbk5WeEZrbGZqMXQwbnZFb1B6a2xpdFhXcVk5RWFvUTFEd29nRTlZYzRmUQ?oc=5",
+       "title": "세종교육청, 2027년도 본예산 1조2060억 원 편성"
+      },
+      {
+       "source": "오마이뉴스",
+       "lean": "진보",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB1ck1wY0psY0JFNWZwSzFfUHRPb0kzaTFHN3MzZ29UODJ1TUVfbkpMMjhQRXpEeHJVbFpiV2psemNja3VhMXR2WWE4ekk0VWVNaGFjMDNGTGlKNE1pTnphRTAxLXRJQ3l1QmRlbUh3cXBRZmJm?oc=5",
+       "title": "\"줄일 수 있는 것은 과감히\"... 세종교육청, 60개 사업 정비"
+      },
+      {
+       "source": "세종시민일보",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE56Ujk2OFJGWHdsV3NESTlOMjA2bW9mU0pHZWVac09KZnR5dHNTU01fVTM1NmpjRGJQVFoxQWR3UWZ4NzMzWnZGa21lZjlXQXNiVTRDRWFJc3FSWnI2Umd5SUw2TXRURkZIRHcyMklBclQ2RjQ?oc=5",
+       "title": "세종교육청, '선택과 집중' 예산 편성"
+      },
+      {
+       "source": "백제뉴스",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAwZGhEMk41UjdFVV8zR1V4VjNhNzJScXluZThJNXRQYTdLT0FwWmpsZm9zR095NU1zUW8wanFJX19HOWk1ZWxZaGRjd1pheFdBclRicTZnTGl0Y0ZoeklSYm9pLWtPcnBzczh5dA?oc=5",
+       "title": "세종시교육청, 2027년 예산 1조 2,060억 편성… 전년 대비 2.1% 증가"
+      },
+      {
+       "source": "충청뉴스",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5EekRqaVk4LVl4SkxmUUZoeDBzTkZKZl9GOGtKV2k1NnNXQTVmM2N3X0dlZnJ1bWdOdlpwS1ZxXzI4R2tZbkNadUN4QmN0Q3dSNW1aVjdKQ215SHlseXNCT25vTTFtN1FPY19R?oc=5",
+       "title": "세종시교육청, 2027년도 본예산안 1조 2,060억 원 편성"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-g25",
+     "region": "global",
+     "field": "교육정책",
+     "title": "미국 주·지역 교육재정 개편 논의",
+     "summary": [
+      "웨스트버지니아 교육부가 새 재원 배분 공식을 제안했고, 소요 비용은 4억 1,000만 달러로 추산됨",
+      "알래스카 입법부 교육 태스크포스는 재원 확대를 위한 정책 권고안을 제시함",
+      "오크파크 교육위원회는 세금 부과액 4.01% 인상안을 잠정 승인함"
+     ],
+     "implication": "재정 압박이 학교 예산과 교육 여건에 미치는 영향을 비교하며 국내 재정 논의에 참고할 만함",
+     "perspective": null,
+     "tags": [
+      "교육재정",
+      "재원배분",
+      "미국"
+     ],
+     "score": 65.0,
+     "score_parts": {
+      "확산도": 36.7,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 13.3
+     },
+     "streak_days": 7,
+     "source_count": 5,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "The Dominion Post",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNajYweElUbFlWNUxHaW1MZ1VQbGpGSmJ1Umg0eXJYeDEweGc2bXpNSzhzQ19qdURQQlJ6cGJOODRvYWJoRm5uWWp2TThtWk5CVnk4bE1fR1MtU19UOXFMQ2Y5Qk5aVHV3eHlxSV9fN1l2S1RwZ2lzdlBGMTZOWThQb1lxbi1SemtpOUhFMFcteEc1ajFkTlZkNzAwRVQ5NFdXWnRfbXZ6RklNdVREMVdvQWt1V3J1dnZ2dDJtZm9zWVBxeHF2UDZNVg?oc=5",
+       "title": "W.Va. Department of Education briefs lawmakers on proposal for new school funding formula"
+      },
+      {
+       "source": "Wednesday Journal of Oak Park and River Forest",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaXRqdXptVTdnWUpEUzBBMnJLY09fajZCMXVxWDZJaWFHWkRoLVdycE5aZW91ckNZUGxmV3FFQlBvWlN1SXBIUG1GejdOVC1SMkdhT2lOVjdORDhPdFl4ZnhlZG5qQVh4N2hUc05zZmJkdkhITm1uRTRpWlNPUV9FQ3Y3cE5OUTJURS00NGxGYjBsUlhmWEpV?oc=5",
+       "title": "OPRF board approves tentative tax levy with 4.01% increase"
+      },
+      {
+       "source": "Charleston Gazette-Mail",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQQmlNQ0NhSHB6RXpxTnRfaXEyVW03RTlpYWpuVFcxazBhb09MVHNpcXBkYlVoUC1SVFpnTjhoMXktTzhqSEsxS3B5M3dSSGo4UFJvOWVXMDhnOEs4dTBMREVsQWpIckw5RUYzcmpieHVMVlQwZGY4QTRtN09EbGQtV09YNDVkTkg4cDI2aWJUWWNlSWNtZlVlWTJuczIydTloODNxRnd2U0oxQTFpYlB5ZWowaUJqemhKSmVubXN3SWRqUnFaN1hadEVLdXdSSWltYXVDNzRHQ1I3NXljWXVHUFNuZ1R3QU9nTFM5Q0RiczQ5Mlh0LWI2S0h4MUljUQ?oc=5",
+       "title": "School funding fix carries $410 million price tag, says Education Department"
+      },
+      {
+       "source": "Star Tribune",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOLWxRV2ZtcEl6QlZsS0JYbWxpNHhjeFdzX3dmeVFhRXVDbC02LTRZUWFFQlpmXzFFeHdzYUctMHN4RHF0Q3M0cWk5M0ZEYWZRY0k5dmJxT1JsZmRVLUl6V3dKYktNbTBJb05LV0hLNEI0NWc2YVBNU0dHU29PZlNLUEZmSjdGUGVF?oc=5",
+       "title": "Klobuchar inherits Minnesota school district money woes, stagnant test scores"
+      },
+      {
+       "source": "Juneau Independent",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcmRlT0tJUGFZODNZdTh2NTRlUHcwaXlaYjl5c2djRlVKV1VRR0c0MkhSaGtjUW02Vkp4WURoV2c1NWdzd1pxSW40TVdJMVZLaWptVUgtUjVFdko5b283cHpORGxFSkVYbG5KbUEteFhVNWNvOExGNGxjNnNJeEpxd1NBOFl6YmF4cXZ1cTNvY0FUeDVxQ1JmU2ZMZEYtbTRxYUF0a29mRTVpR2htUG9YY2x1SmxxcGdER1hYeGVYZ3prVGQtaV9aYQ?oc=5",
+       "title": "Legislature’s education task force seeks more funding via series of policy recommendations"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-g33",
+     "region": "global",
+     "field": "교육정책",
+     "title": "미국 선거 후 텍사스 교육위·교육부 전망",
+     "summary": [
+      "텍사스 주 교육위원회에서 민주당이 30여 년 만에 다수당이 될 가능성이 있다는 보도임",
+      "지나 이노호사 후보가 텍사스 고등교육을 개편하려면 험난한 과정이 예상된다는 분석이 나옴",
+      "미국 교육부의 역사와 학자금 대출·정책 기능을 정리한 소개 자료도 함께 제시됨"
+     ],
+     "implication": "미국 주 단위 교육 거버넌스 변화는 교육과정·정책 논의에 영향을 주므로 해외 동향으로 참고할 만함.",
+     "perspective": null,
+     "tags": [
+      "미국교육",
+      "텍사스",
+      "교육위원회"
+     ],
+     "score": 56.7,
+     "score_parts": {
+      "확산도": 28.4,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 13.3
+     },
+     "streak_days": 8,
+     "source_count": 3,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "WFAA",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPa2ZHZFdUMmZmWlM0TkR1d3cyZDg0ZnBYdllVUXZQYUhsUXR6X0RlQWhTUi1wdGprYzIxWmZaN2pnWGF2RWpYZTc3QWd0bXdtdzN3cDFJX0JZRFJySnNoVHF4UlRnVmF0aExDNXpTWWZSazB3QXh0S3FBWXRwbWpaV1JUVUliNWVPTWMweGRha1pHTFh5RDQxNHlGVEZyNTEyQl9pT0pycmNwbDE1LS1sQi1EWmUtdWRWQlJSMV96eXVlcDZRMEdRTHhENHRsd1ROaGREcEt5MldWMF9nWTRuOHBQYjJWdE15NWI4Q3hRakYwaWdUeV9Bd1hhNXFLdU1VZ1haS09yV1ZmVFNUT0laZmFYdWFmZFlCdmVnb3RUZTE2RTQ?oc=5",
+       "title": "Democrats poised to take control of Texas State Board of Education for first time in more than 30 years"
+      },
+      {
+       "source": "Britannica",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9tVVppbWJidEN5ZkNwVDlUblVZVURJSGZpcnFoejlwOTg1OXJrS1l3LXdJT0FBUGNmTkRzZkh0Z0t0UGRrdmxfTmVqV1JBQlhkVXVWMkRqbjBuU3JfamRfZE1ITVlxWUwyYTZn?oc=5",
+       "title": "U.S. Department of Education | Student Loans, Policy, & History"
+      },
+      {
+       "source": "El Paso Matters",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQk9vRXpqenhtcFJnWmE1aGNUOTFRVl84LW8tbzEwRW5wZUgtZkxfTXFjeThHemxTLXJDdFBKZGR0azBJX0VDT0pvTXVMT0oxbXZxT3l5M2pDcW1kekQ1c1VMM29KSFVCRG1RZEdqUlIwelY2aF9HQlBpZ2VZV1d4XzJESlJseDJoVlZyUEZjT1prcWViLXNHTVhURGM1SXoz?oc=5",
+       "title": "Gina Hinojosa faces a long road to reshape Texas higher education"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "field": "학생인권·생활지도",
+   "issues": [
+    {
+     "key": "2026-11-11-d13",
+     "region": "domestic",
+     "field": "학생인권·생활지도",
+     "title": "경기도의회 김선희 의원 교권·학폭 대응 지적",
+     "summary": [
+      "김선희 경기도의원이 포천·가평 교육지원청의 소극적 행정을 지적함",
+      "100m 접근금지 조치가 내려졌으나 가해·피해 학생이 같은 학교 건물을 쓴 사례가 거론됨",
+      "교권·학교폭력 대응과 수의계약 관행의 개선을 촉구함"
+     ],
+     "implication": "접근금지 등 분리 조치가 실제 학교 공간 운영에서 지켜지는지 점검할 필요가 있음.",
+     "perspective": null,
+     "tags": [
+      "학교폭력",
+      "교권",
+      "경기도의회"
+     ],
+     "score": 57.5,
+     "score_parts": {
+      "확산도": 22.5,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 20.0
+     },
+     "streak_days": 4,
+     "source_count": 2,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "세계타임즈",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xYkplZm1NaGxCWlc0Q0RUWUtoZGhYVF8xaC1JbGFDelkzZW5wcFpxNGJ2VFlUN21ycGVoLVQ3TWFuLTYtNXc3OG9SUHAwNnZudFM00gFTQVVfeXFMT3FiSmVmbU1obEJaVzRDRFRZS2hkaFhUXzFoLUlsYUN6WTNlbnBwWnE0YnZUWVQ3bXJwZWgtVDdNYW4tNi01dzc4b1JQcDA2dm50UzQ?oc=5",
+       "title": "김선희 의원, 100m 접근금지 내렸는데 같은 학교건물... 포천·가평 ‘소극 행정’ 정조준"
+      },
+      {
+       "source": "전국매일신문",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9GcU5iX2NQUlEwWlR6MUptQlhjTnMtTHBCUERFLWE1RlhCa041a1ZTMVNxT2ozTTl2S0Z6Mlo1ZFUtcHFleTFFYnlQWV9VdURwbkRZNE9BbUYwQnIxdkJ4WjF2TVR6YUR6U0dpOQ?oc=5",
+       "title": "김선희 경기도의원, 교권·학폭 대응·수의계약 관행 개선 촉구"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-d11",
+     "region": "domestic",
+     "field": "학생인권·생활지도",
+     "title": "서울시의회 학폭 피해학생 전학 지원 강화",
+     "summary": [
+      "김현우 서울시의원이 학교폭력 피해학생의 전학 지원 강화와 지원 책임 확대를 촉구함",
+      "피해학생이 희망할 경우 전학을 지원하는 방안의 검토를 주문함",
+      "곽인혜 시의원은 학교폭력대책심의위원회 처리가 2~3개월 지연되어 피해학생이 등교하지 못한다고 지적함"
+     ],
+     "implication": "심의 지연 시 피해학생의 등교와 학습권을 보호할 임시 조치와 전학 안내 절차를 확인해 둘 필요가 있음.",
+     "perspective": null,
+     "tags": [
+      "학교폭력",
+      "피해학생",
+      "서울시의회"
+     ],
+     "score": 56.7,
+     "score_parts": {
+      "확산도": 36.7,
+      "논조 폭": 0.0,
+      "지속성": 0,
+      "공식성": 0,
+      "현장 관련성": 20.0
+     },
+     "streak_days": 1,
+     "source_count": 5,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "성동저널",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1hMExfWDN1c196VFZkUXdhWThDQ18zZGd4YnkzV3MyYVU3ZzE4anFjWTdBaThCcUFJZkltZDhBWTlQVUZfOFFubTRuVVVGR092OUZNakZPcE9ldHlwX2xaOXF2YVZ6cmVLSHhSZGI3ZXE?oc=5",
+       "title": "김현우 서울시의원, 학교폭력 피해학생 희망시 전학지원 검토 주문"
+      },
+      {
+       "source": "영등포시대",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNS1ZqRjlWVnoxYlBvWjlnaXBDbFdORkJ2UFl1VFdLZWJjTGVWSVc1bXZXc0JnQ21MQ2JLZnY3WXR3aWVTY3NVTnIxd1Y1VDRFN2NsVktXenk3UVRnbzhYY0ZNM25KOVF2eDdHVDRBXzdyeDdjSDI0eXNUNzlkaEk2enJIWkhBZUgw?oc=5",
+       "title": "김현우 서울시의원, “학교폭력 피해학생 지원방안 마련해야”"
+      },
+      {
+       "source": "서울뉴스통신",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9OU1dZVlBnakdVU1JkMlRXaFBiQVdqNWNZM2YzMEVLZTZUeTFaXzhxSnB4bmsxRGpleERsVlM1eFNZVjlHQnRWbnFQcDQtUTF3R0hzd0xnVVNETlhDU2lnTjBWVnRwNjE5TnVv?oc=5",
+       "title": "김현우 서울시의원 “학교폭력 피해학생 전학 지원 강화해야”"
+      },
+      {
+       "source": "뉴스핌",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yZ0FZY1A0SkRFbDRaSE9UeWxHN0h1R294TUNINGVTbk1jeWg5NHV2VUk2Z0liVTM1R0pSb3B2dS03SURvdmZTOWUyYXdfS3hkVDdrdXh6SFA5bkht?oc=5",
+       "title": "곽인혜 시의원 \"학폭위 2~3개월 지연, 피해학생 등교 못해\""
+      },
+      {
+       "source": "서울일보",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBXRHdXNkdaQk42NUNTX0hJejRsZGdhRHVkMXdTUzdCYU4zTDJTbm12S21jbXQwM3VOWVFxV0E4bUdTdEhETlZ2TC02WWZtNFZnQkFuelh4S0lKbEhqb0NFb2x2TmdTVGItZDFn0gFvQVVfeXFMUEptaWVteVFUTFJhNFdDVzBfSmZHQ0x4ME1vbk9KenowdjhpdVpDUFhaRFluZURvVVBzbkhQY1piUklfMVZZN3VzMHd4WlJBRExCY3VLZTA2TGVVQ1Q3eXdGZ2t4aS1uVXlvWTNCd0tV?oc=5",
+       "title": "김현우 서울시의원, 학교폭력 피해학생 전학 지원 책임 강화 촉구"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-d14",
+     "region": "domestic",
+     "field": "학생인권·생활지도",
+     "title": "학교폭력 예방 캠페인 확산",
+     "summary": [
+      "진주교육지원청이 자전거 대행진 행사에서 학교폭력 예방 캠페인을 진행함",
+      "울릉교육지원청 Wee센터가 2학기 학업중단 예방 및 학교폭력 예방 캠페인을 실시함",
+      "군산경찰서가 등굣길에서 보이스피싱·학교폭력 예방 캠페인을 전개함"
+     ],
+     "implication": "지역 교육지원청·경찰 등과 연계한 예방 활동을 학교 자체 예방교육과 함께 운영할 방안을 살필 만함.",
+     "perspective": null,
+     "tags": [
+      "학교폭력예방",
+      "캠페인",
+      "지역연계"
+     ],
+     "score": 56.7,
+     "score_parts": {
+      "확산도": 28.4,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 13.3
+     },
+     "streak_days": 7,
+     "source_count": 3,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "전민일보",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE96OUd6MEJJVXUtNU84ZkxlZUNuNUlfMjVzaXNGSzJkY3FzbDN4VWVZY1Yybkd4UksyTTZtSktTN0FjYXkyZGc1TXR2RWlScFI4dTRLVVR3d1AzSk9xX0wwc0RIX0xlZw?oc=5",
+       "title": "군산署, 학생 등굣길 보이스피싱·학교폭력 예방 캠페인 전개"
+      },
+      {
+       "source": "경남일보",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5kYnRtZnBfMzVmQjBOTldYQy1UMWNmc1NaZXVsb3pSbUpXQ0ZYQTY2TzNrbElzTl9NenBRVXlhQ2staXBQa3NkSnBuWS12QWlHNm16ejNKNm9IOU41QjZybHFtdEh0cV81U1Zv?oc=5",
+       "title": "진주교육지원청, 자전거대행진서 학교폭력 예방 캠페인"
+      },
+      {
+       "source": "밝은미래신문",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB4M2sxMDA4ZGN6TWVpR2MzUjJ0QzdvWWNmNTBQaFVJQmc0LVpSa1FkWXdKZFowSEF1bjQtbXF6WnZ0UmVlMzhJeUNXeTFjQQ?oc=5",
+       "title": "울릉교육지원청 Wee센터, 2학기 ‘학업중단 예방 및 학교폭력 예방 활동 캠페인’ 실시"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "field": "AI·에듀테크",
+   "issues": [
+    {
+     "key": "2026-11-11-g01",
+     "region": "global",
+     "field": "AI·에듀테크",
+     "title": "영국 학교 내 휴대전화 소지 금지(2027.9)",
+     "summary": [
+      "영국 잉글랜드에서 2027년 9월부터 학생이 가방·주머니에 휴대전화를 두는 것도 금지하는 방향의 지침이 제시됨",
+      "학생이 하루 종일 휴대전화를 제출해야 할 수 있다는 보도가 나옴",
+      "재정 지원과 실제 이행 확보 방안이 주요 쟁점으로 거론됨"
+     ],
+     "implication": "휴대전화 보관·제출 방식과 이행 부담을 비교해 우리 학교의 사용 규정을 점검할 때 참고할 수 있음.",
+     "perspective": null,
+     "tags": [
+      "휴대전화금지",
+      "영국",
+      "생활지도"
+     ],
+     "score": 75.0,
+     "score_parts": {
+      "확산도": 45.0,
+      "논조 폭": 0.0,
+      "지속성": 0,
+      "공식성": 10,
+      "현장 관련성": 20.0
+     },
+     "streak_days": 1,
+     "source_count": 13,
+     "leans": [],
+     "official": true,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "LBC",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9neEI5RDZYbVcxTjBRTGFzRzd3Si1SU0V0bG15QnNkVTdwaWRmSDRRQlpVV2t3Y3lxejFoN0M3S2dEWkV2T2FVVUNsWmQ3bmlKYUFYNnJJck9CTDN3NnZQeFV2OFNwR294YjNQNm1zQzhvQQ?oc=5",
+       "title": "Phones should be banned from schoolchildren's pockets and bags, new guidance suggests"
+      },
+      {
+       "source": "Daily Express",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE44NDNJQXRVVVBIaEFlNEVUWGpwR0h3bDg1SlhOWVgtQWVXRExTZ3RxZHpXbVRQZXd0UlRtUG9JeTdiTkJCSFd3S0JPSEgzZF9Kd3MtaS1aTFFwd0lRLUdjQWxncU1SWjFVVkZVT0FzZHFhZzVoaktYcmZWZTIzQ2PSAYQBQVVfeXFMUEdmeDVob3MwZnBkVmotSnZhMWxNQ2xZeDJxZXVQX05OWFY2R0c2Y25BLXppdC1mOU1iMEFFTXdFOHdaLThpanJNU1dzc2xvRlVxenlDd0psYWRtZlNQUnlhS0kxUmttTTBpbUJZNS1HbjFVck1fYWF3Z1l4QUhBeGRqY3Nu?oc=5",
+       "title": "Millions of phones to be banned or taken away from children at school"
+      },
+      {
+       "source": "Swindon Advertiser",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPdHR2bjhKXzhvRlpEQ19JMi0wRWdEZVNXYmNYTmNvRGR0WkRZZlVCeTRIMzVxU2hwN0NFUy1Wd01ZdC03M0FNWVhPOHpJNVN0eE1wbE9OQnJVVWZfN2RpdWFLNlZSZWtyT0JNc3ctc1djUmFjcGRDQlN5ZUN3UEl5eHItTVlvZFJNRFlRR2dEWmpKOTBQLXY5MFNQNDc?oc=5",
+       "title": "Phones to be banned from school pupils' bags as new rules come into force"
+      },
+      {
+       "source": "EasternEye",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOLW5DbnJvQjRLNkJveE5IVFA3RzM0T05mTE5zMVVPQ2Ywd1c5cW9wYXJyUXh4WDU4NElSUHVvVzcxbjVuc2tWMzJpQXJ0c3FPWEpiNDM3MGl0UzN0UV9IdGVXUG5lZnplaVFUcG96UGstMFltb3VfWkx4WEhDSTRSQXJKdUl6SjNrX2lGVWt3?oc=5",
+       "title": "England's School Phone Ban: The Big Question Over Funding and Enforcement"
+      },
+      {
+       "source": "The Irish Sun",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE03czEtUFA3b2RNMWp4RDZOcXdJeHpUeGlqUkpLZDdiUWJyU0Z0Zk5xaDI4dnJqV0RJUFB3eklnc2hIck00T003a2VzV1RBOW5LNEdoRXhMVUhCQzhZVEVrbFZMb09EUDZaam4yZThwdVg?oc=5",
+       "title": "Exact day phones will be BANNED from schoolchildren’s bags and pockets under stricter crackdown"
+      },
+      {
+       "source": "https://streamlinefeed.co.ke/",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcGw3WE40Q3M2ZjFSemZCaXJ5Qm1wTGpubExkcTRsQktzOUtuMFJYZHdTckJvcWQ4NURsTmFjU00xaENySWN6OEZyay1xTFQtWnV0NHhIOS1SbTUwSUpEQkJRdjlMVDdEenRwNDRBc2RUWHNPcWdlMnlGeTZRWF9kd2VMdmdIbFpEWTNTVU10c25QNU5FcTdRcS1TUTZuTkxZRnREbm5PaGhBZXRvWmpvLUxVb3pXZkpZ?oc=5",
+       "title": "England Strengthens School Mobile Phone Ban, Prohibiting Devices in Pupils’ Bags and Pockets"
+      },
+      {
+       "source": "Daily Sun",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ1RWSjFzMG9Md1NaRUctYklidFVmRmFJdTIxc3VpcUtlR2N0Y21Vazd2TGVIVE9DaDhHOEZ4UHh3SHJad2ZiZV9HSFpTSW1PZ1pXdTNFMjJlUEJGelBnTkJHcU1Ocy1mQkd1UHo3M3plR2xrbGJCMG5NdGdpVlFLQk9CdlhReDVqb3h4MXBLTGlna3l3VHFJRnNlTWZmcU4wNmN0TjRocmYwYmEzY29tcjhhYVVVTFU?oc=5",
+       "title": "England to ban pupils from keeping mobile phones in bags or pockets at school"
+      },
+      {
+       "source": "Nacionale",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRkk4Wm13V1p4NDBhRkJ0OGNwY2tjWTlmbklLZFlNRmhGQkVpZnU3dlBtZEZOYkdVdVktalU5RXZ0NVlPMnZHT2ZLVGtPWWUyUkJWWUFTRjB0UWxva2lRSFRGMFFjRE04TUlPdTQwM3UwUms0UVZGWm5qLUVxNUw5cEJhYm03SUl5YXVDcTRQMXd3QWlsN2xFdEttaVhibHdjMWFWRw?oc=5",
+       "title": "Are phones banned in schools in England? Yes, and from September 2027 not even in bags or pockets"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-g10",
+     "region": "global",
+     "field": "AI·에듀테크",
+     "title": "교실 AI 활용에 대한 교사 반응",
+     "summary": [
+      "미국 방송에서 교사들의 AI 교육 활용 경험과 기대·과제를 다룸",
+      "한 교사는 거의 모든 업무에 AI를 쓴다고 밝힘",
+      "NPR은 학교 교육에서 놓치고 있을 수 있는 AI 관련 교훈을 짚음"
+     ],
+     "implication": "교사 업무와 수업에서 AI를 쓰는 범위와 기준을 학교 차원에서 먼저 논의할 필요가 있음",
+     "perspective": null,
+     "tags": [
+      "AI교육",
+      "교사",
+      "미국"
+     ],
+     "score": 63.4,
+     "score_parts": {
+      "확산도": 28.4,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 20.0
+     },
+     "streak_days": 5,
+     "source_count": 3,
+     "leans": [
+      "중도"
+     ],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "FOX 5 New York",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5YNng0SmhReWpHbVNOSzlxdmdFVGZaNUU4N2dSQUlrS2RROW51WlpWWEJQWmxnODNvSmVTV1hDRXRndkRzeVJGSXl4aFl2RWhyRUs5WC00R19YTjZPRnfSAWNBVV95cUxOakNFQ3lINFFYNHRHaDNyWi1kVDIzeUlDcTNoYktKZ09xT3dUQk9ic3E3OURua3FoWXlSbU81dnZOamhlRllURkhWNVpYeTdZNnhPWnV5eVFjWHJNRzdxZFUwSjA?oc=5",
+       "title": "Education journalist talks AI in schools | Tomorrow's headlines tonight"
+      },
+      {
+       "source": "ABC News - Breaking News, Latest News and Videos",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSDUweEQtYnZ5cFdpR2tKbW5oVS1yWk5fZEVkc1E4ZXhJNl9aeDk4UDFWM1NWVEgtZXVHb1RLV3ZSRDA0cjB4UmlTclFiYlZOTmloam1zS0tnWmRNNGxQZGxlU2w5cEFlOGU2bWtQTEk3Q0FITlFrdXhDVWVfRWM0TFJBalljWkwwa2pnWmdrOFRBTFR5ekV5TNIBngFBVV95cUxQbHFibWYzRVVka1dGUGNXQ0RYNmwtU2tZdUNzR0Z2ZFg0Ylk5Snl6OUZmQllsNXE5SlRNcVFHX1VxUVRjNUhWQ2drcHN3VzVQWWM3cVBjUUhORDJfWW9hcGwxTlpSRmdNNnFTUmcyQW80U0o4X0VRdjd6NHRzcDV4bkNncXJYdU5IdzFTZGxHMS15c2tySjlNYnhKeXlMZw?oc=5",
+       "title": "'I use AI for nearly everything': Teachers discuss the promise and challenges of AI education"
+      },
+      {
+       "source": "NPR",
+       "lean": "중도",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMW9yUEZuUDNmUWlGZjJlZjQtMEJNR0NkalJIb05WbE5zNVI1Nl9vZ1p4UVZyYmpUT2RVWVR4b3lPUXdMVldmUFBwRkdITWsxaTZlWVNUdUpSOG5DUXBKNlRvWUkwbGZuZ3ZMTkJoVXdLTTR2akVQc1R3bnpyTXd4QlFBaDBZbjE4UW1XaV9kRkk4cFBsRGVYc1kzQQ?oc=5",
+       "title": "The A.I. Lesson We Might be Missing in Schools"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-d42",
+     "region": "domestic",
+     "field": "AI·에듀테크",
+     "title": "주민·직장인 대상 AI 활용 교육 확대",
+     "summary": [
+      "중소벤처기업진흥공단이 2030년까지 AI 전문인력 6만 명 양성 계획을 밝히고 안산에 제조AI 교육센터를 개소함",
+      "포항상공회의소는 채용·평가·보상 등 AI 활용 인사관리 교육을 실시함",
+      "동대문구는 아파트 관리사무소장 40명에게 AI 활용·민원 대응 실무교육을 진행함",
+      "충남 도내 8개 지역에서 마을 교사 대상 AI 교육이 이뤄짐"
+     ],
+     "implication": "지역사회 AI 교육이 넓어지는 만큼 마을교사 등 연계 인력의 AI 활용 역량도 학교가 살펴볼 필요가 있음",
+     "perspective": null,
+     "tags": [
+      "AI교육",
+      "지역사회",
+      "직무교육"
+     ],
+     "score": 61.5,
+     "score_parts": {
+      "확산도": 39.9,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 6.7
+     },
+     "streak_days": 7,
+     "source_count": 6,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "경북신문",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE03cEF2dFhHZmg3NzZmTmV6cXhCY1RUSFY5V1ZlVU5oSTdvY01ibjdBRXJfdlVaZ3gwT2NuOHBSWndFTFhCZTB6UzgwR1dGaF9YeE1IdUFoTjk?oc=5",
+       "title": "포항상의, AI 활용 인사관리 교육 실시"
+      },
+      {
+       "source": "경상매일신문",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ibmllcFc5R2UyVk1KODZ6RzZuU2pydHdiTzJNdDJSNGNyZzE3VGJNa09RWWxmN1ZhTmpFRmxwZGM1anZfa0wyeTVvUDdlNnBhb1V0V2FmR0xIQlN4NUNz?oc=5",
+       "title": "포항상공회의소, ‘AI 실무 완성, 채용·평가·보상’ 교육 성황"
+      },
+      {
+       "source": "충남내포뉴스",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1wTVVRaVhuSkJTOXJDMWNiWHZOcG1WVHZ1ZG4yOWkzUmVKb3dTaUhGbDliMF9PRWw5MEtwYzRhT25YVmQyT3JaX0E5Q0R1MGZHVXBRdHc3d1FUVHB5TUQ0VUdJcFNwSXFTQmJpSFhn?oc=5",
+       "title": "도내 8개 지역서 마을 교사 AI 교육 실시"
+      },
+      {
+       "source": "경기신문",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9ycXFFT3dYY2l4Unhsa0NyZG5ZcGZfRGJNZmMzNGpsWi1nNXVlSERZVHZqSjhmajEzLWJfLUdFb2NMbUpVTkFIendTQ0R1Ymc0d18xSmEwWjhCSmFZX3h3SS13?oc=5",
+       "title": "중진공, 2030년까지 AI 전문인력 6만 명 양성…안산에 ‘제조AI 교육센터’ 개소"
+      },
+      {
+       "source": "경북일보",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1yRGNIempJbzBTVm1lem55S2lmLXR3WkRWcmhreFhzeTY2VUFNT2tnQ3N4QXl6M1dZMmdQNXg5Q2xVaDdvYmR4TzQyMlc2VWxiazhVRl9EVkFRekhRY1F2RXIwTDRpYkZoMTRfMUZJZw?oc=5",
+       "title": "포항 기업들, AI 인사관리 활용법 배웠다…채용부터 성과평가까지"
+      },
+      {
+       "source": "동대문 이슈",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1UeDNtaDZxN0E2NUEyczVmSHRmcUUtSXJ2UV9jdHd0UVY4N3g1TGNFU21jUW01THB3Sm1vTjU3cVNxalZxMzNQMEMwRGpSM1pFbDlVem5DX0lpMnhoWFQ5OVRB?oc=5",
+       "title": "동대문구, 아파트 관리사무소장 40명 실무교육…AI 활용·민원 대응"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "field": "사회정서·청소년",
+   "issues": [
+    {
+     "key": "2026-11-11-d03",
+     "region": "domestic",
+     "field": "사회정서·청소년",
+     "title": "교육부 학생 마음건강 안전망 강화",
+     "summary": [
+      "교육부가 학생 자살·자해 위기 징후 증가에 대응해 마음건강 안전망 강화 대책을 마련함",
+      "맞춤형 현장 자문을 통해 학교의 위기 대응을 지원함",
+      "한국교육신문은 교직원 소진 문제도 과제로 제기함"
+     ],
+     "implication": "위기 학생 발견·연계 절차를 점검하고 담당 교직원의 업무 부담과 소진을 함께 살펴야 함",
+     "perspective": "교육부 대책 보도는 위기 징후 증가와 현장 자문 지원을 중심으로 다룬 반면, 한국교육신문은 교직원 소진을 과제로 강조함",
+     "tags": [
+      "마음건강",
+      "위기학생",
+      "교육부"
+     ],
+     "score": 68.4,
+     "score_parts": {
+      "확산도": 28.4,
+      "논조 폭": 0.0,
+      "지속성": 10,
+      "공식성": 10,
+      "현장 관련성": 20.0
+     },
+     "streak_days": 3,
+     "source_count": 3,
+     "leans": [
+      "중도"
+     ],
+     "official": true,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "미디어생활",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9aRlpCalI0VUxoT3VtZXdyOUdLSlF4bHZzdjdEeFpzb2RpY09qNHFNV0NvcXdkRHVnMUZ0MjZ5dHBSQkJ2eENjbW5KZExzUGFYWDJBWFhqVnVTTlNMeVFGRndqN0Q1SE9EVVUwZzN4cw?oc=5",
+       "title": "교육부, 맞춤형 현장 자문으로 학생 마음건강 안전망 강화"
+      },
+      {
+       "source": "한국교육신문",
+       "lean": "중도",
+       "type": "교육전문지",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB5Z29DRjAxWjdCTmlwTkNia0dwalhiUGZ3aGFHM25CeHRGUEs4N2RVbkJ5Uk1IMHJIVF95YWg0QkNjdnZkSUpjSmxSNnFGMlVHQWZWSzVOd2ZBakoyaEM4?oc=5",
+       "title": "학생 마음건강 위기 대응, 교직원 소진도 과제"
+      },
+      {
+       "source": "뉴스N연합",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1hZG5JaVpmU1Nac2pLRzAxX3VEMkNVRGJuYUh6S28zbC1PQTZjS1pRYlN5SVNzaVlWVTh3MXF3cG9VSkdjSVZtdS1B?oc=5",
+       "title": "교육부, 학생 자살 및 자해 위기 징후 증가에 마음건강 안전망 강화 대책 마련"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-g35",
+     "region": "global",
+     "field": "사회정서·청소년",
+     "title": "미국 학생 정신건강 지원 프로그램",
+     "summary": [
+      "미국 학교와 지역사회가 협력해 학생 웰빙을 지원하는 사례가 소개됨",
+      "뉴욕시 공립학교와 JED 재단이 학생 정신건강 지원용 온라인 과정 'Let's Talk NYC'를 개정함",
+      "Youth Today는 여러 기관이 연계해 청소년 불안을 다루는 방식에서 얻은 교훈을 다룸"
+     ],
+     "implication": "학교 상담 체계와 지역 기관의 연계 방식을 점검할 때 참고할 수 있음",
+     "perspective": null,
+     "tags": [
+      "정신건강",
+      "지역사회연계",
+      "미국"
+     ],
+     "score": 56.7,
+     "score_parts": {
+      "확산도": 28.4,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 13.3
+     },
+     "streak_days": 5,
+     "source_count": 3,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "Sanford Health News",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWGVyamg0cDU3dFlqMWVkb090RC1IVU9iNjV5aWx1anZibC1hZXAxc3VMUklaVVdiZHlsUHpUbUxKZEVjZlBLWUJGS0xtVktCVzh0MWZhcEdvTEtFYlpMckR3ZTRNVk9IdUpNMHJNOVdKUWdra2pyUlY5Y015b0NUekRhZWJvVVNpRUw0S0xnTk96OWFidXRqc21tV1ItazVoblViU3BTQWNDU3Rzb1FjUXc1aG91UQ?oc=5",
+       "title": "Schools and communities team up for student well-being"
+      },
+      {
+       "source": "The Jed Foundation",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5oOFFuR05oQ2ptaUIyQnlFUnVPSFVWbi1VUjdyb3EwMTg2RmNuMW9WZk9mUnpTejFKdmJBRWxFekIyRW53Yk4xeDk0TFM4NzdOYUVlNFhzVlFIVHFqV3h1V05FZVA5eDhHbVZMaUwwR004SnBM?oc=5",
+       "title": "New York City Public Schools and JED Update “Let’s Talk NYC” Online Course to Support Student Mental Health"
+      },
+      {
+       "source": "Youth Today",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTFVFRGlSU0g0T05salNnUTN2WUVlajRDd0pwc1hXZkxVb3RsbG0wVG1SNkk2a3VUUEhmNk91N0ZwT05qZDhEck94dnFEVnd6ZGJlYUJYZVF5RG9jX1Y3NEZwQVpCWkh5S0I4dUpydlVGMEhCTlBSQWw3ZHhaeWZKa2dlZmJFclc3ZlJ3RWJDUThuNVZjZlpoQUtFZV9rZGM2RWRzRnIzNHNERWlRV3B5aGJaRnVEYVJyeTREanpqSQ?oc=5",
+       "title": "From silos to surround sound: What we’ve learned about treating youth anxiety across systems"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-g34",
+     "region": "global",
+     "field": "사회정서·청소년",
+     "title": "미국 대학 정신건강 활동과 캠퍼스 사건",
+     "summary": [
+      "캠퍼스 비극 이후 학생들의 정신건강 우려가 커졌다는 보도가 나옴",
+      "미시간대는 캠퍼스 건강 증진 5년의 성과를 평가함",
+      "메리워싱턴대는 프린스턴 리뷰 정신건강 우수 대학 명단에 오름",
+      "대학생 대상 연구는 화면 사용 시간·온라인 괴롭힘과 자살 사고의 관련성을 살핌"
+     ],
+     "implication": "온라인 괴롭힘과 화면 사용 문제는 초등 고학년 생활지도에서도 미리 살펴볼 주제임",
+     "perspective": null,
+     "tags": [
+      "대학",
+      "정신건강",
+      "미국"
+     ],
+     "score": 54.6,
+     "score_parts": {
+      "확산도": 33.0,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 6.7
+     },
+     "streak_days": 6,
+     "source_count": 4,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "The University Record",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObUx3dGp6N2ZFU2VGcjNZRkY2TU1ialpzaHFZcDdHaVhveUdyZlQxNG5QVDNOR0pOZDFraUJ5VUxibHFwa3BkUlZQRjZFZzZaQ0ZFZTZ1WGhKR0U0aWd5X25lakdQbVR4QzF6R0dQNXpNVFJWRVptV2E2WWpCTEpId1hTYlItUG15TVZtb21PdzFCVEdyN2Q2d2xCcXZsOXBt?oc=5",
+       "title": "U-M recognizes five years of progress in campus health promotion"
+      },
+      {
+       "source": "Theravive Counseling",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPLXlMbHIzSVB1bUVqcHNRNDZ0Z3JDR3lIYTNHcU9FNzRHeGtQQTJXWTZsb3RYTXF5REhRWTFTamk5VjVCaFc4eTEwOE1lZTBnYTVBbTdjRWpjRVM3MzJqcVZpTk9XM1FtaDVGLTh6X2IzTng5LUFHUHA5YUswNXI1ajVHS3ltZXZva0h4V1Z4Q29OMHItSmZjMmRSSFdTdEZ5N0pmZFRGMnhSMlE5aGVvUWhNWWg1WFBrN3FqUUMtQ1V2N3hoTHRBVTB5RWRvUWU2Nk1rTHFHWXZydjY4NElSNmF6V3BYUlJreU1fTw?oc=5",
+       "title": "New Study Looks at Whether Screen Time And Online Harassment Affects Suicidal Ideation In College Students"
+      },
+      {
+       "source": "NBC Montana",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcWdOSmN5OHJUQ3dUbEVmVTFoQjY4UlZuLUpiT2syODd4Nng4TEdIWFFyUW8yZDBGSGwtZDlkWlZxZnlqYXV2MlJXTW1mQTFrYlVrcnNCVk83Uk1JN1k4ZEZseG53R04wcUR4dmppZUpuZGZWVUd1cnZZMlhLTHlXd2tkQWpZb3J5QXRyTGhBRk55OFF5U1Jr?oc=5",
+       "title": "Student mental health concerns rise after campus tragedies"
+      },
+      {
+       "source": "University of Mary Washington",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbmdZYUs1amxqMmJZNXdSUFFhMnRoNFVSb0dlVjh3dTNjejhnaWl0em84S1V6Y2Foa1FGNjhsSjFlaGhGVVF1ZFdSV3JyRDVXRkdyZlg3QlFGS0ttT0RrVGZYWk5xa3dDbkJmMWNLVmFLb2l2anpuM2JQWTZ5NnA1a3FYQWNFODU5Q0xNZ29mT3F1cWtvdktBSm40MW4?oc=5",
+       "title": "UMW Named to The Princeton Review’s Mental Health Honor Roll"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "field": "특수교육·포용",
+   "issues": [
+    {
+     "key": "2026-11-11-d28",
+     "region": "domestic",
+     "field": "특수교육·포용",
+     "title": "특수교육대상 학생 체험·스포츠 프로그램",
+     "summary": [
+      "상주교육지원청이 특수교육대상학생 대상 진로·직업체험 운영함",
+      "무극초 특수교육대상학생이 육상대회에서 성과를 거둠",
+      "아산교육지원청 특수교육지원센터가 아산·천안 수영 페스티벌을 개최함",
+      "광주여대 초등특수교육과가 광주선명학교 행사에서 봉사활동을 진행함"
+     ],
+     "implication": "특수교육대상 학생이 참여할 지역 체험·체육 행사를 파악해 개별 특성에 맞게 참여 기회를 안내할 필요가 있음",
+     "perspective": null,
+     "tags": [
+      "특수교육",
+      "진로체험",
+      "체육활동"
+     ],
+     "score": 65.0,
+     "score_parts": {
+      "확산도": 36.7,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 13.3
+     },
+     "streak_days": 7,
+     "source_count": 5,
+     "leans": [
+      "중도"
+     ],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "베리타스알파",
+       "lean": "중도",
+       "type": "교육전문지",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1qc0hVLTVLcmNpT3Nva1FuQlg5WVVyd3hubjBYcEhNaENSNjgzcV9ZZUpOMkpWWEdYbDVrbzB4VlZHMFh4dDFUcUVpQWg5M0luQ3FoX2hyUWZXU0toaDQ3bFlpN2wwYS1zd2pGYw?oc=5",
+       "title": "광주여대 초등특수교육과 광주선명학교 '선빛 DAY'서 봉사활동"
+      },
+      {
+       "source": "투데이충남",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9JSE5sRkFjM0ZpNFBOYXVfOElfbFRBRFIwaEJYMW5QZHdZRnU0N3IyRmgzVWktYmc3MEE5dnVFSkMwTTd2YXR1WUVaQ2xxYWVXeTl3cVRSWjRFSjNLdmgwdmxWNDdsWk1HZ1E3QmxMYW5yZw?oc=5",
+       "title": "아산·천안 특수교육 학생들 수영 도전"
+      },
+      {
+       "source": "음성신문",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE8yUng2dlNyTTFMakVtQnpGcDRGYzhaTzlReEtGVWZ5YXF4NmJGa0doRUhJYzNWc1R6YlVncDNla3BJSEYyVG4za3pnV19aN1p1SDI1WklnaFZiOTVYdkFweVJLUnBpRVFqUkE?oc=5",
+       "title": "무극초 특수교육대상학생, 육상대회서 값진 성과"
+      },
+      {
+       "source": "충청매일",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE8zYkF6ZTBnVllmdkJHTHREbnZ2eF9IQ3JnaFJGUXVjM3J1RTJfYWZqcXBLNkhNTjFPV0dxTHpjd1YwZlJ1ay1TUmVCWGw0VjFBc0ZQUTBaTTlhZGctY1NRVlFWWmtlM2l2ZWc?oc=5",
+       "title": "충남 아산교육지원청 특수교육지원센터,‘2026 제5회 아산·천안 수영 페스티벌’ 성료"
+      },
+      {
+       "source": "대구신문",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1pbzRSU0tPMnV5SHFwQWNGeDNQSFBONzVOU29JNkhaZzRpTVY3R1c4OUNMc0g2RVRTQ29FYVVRNlVKcjhLOE03aDBib2YxSUdyd3JKd24yNThtN01QWHd1blpDQXNCZ1A4T2Rj?oc=5",
+       "title": "상주교육지원청, 특수교육대상학생 진로·직업체험"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-g23",
+     "region": "global",
+     "field": "특수교육·포용",
+     "title": "해외 특수교육 소규모 소식",
+     "summary": [
+      "필리핀 막탄에서 리조트 체험 프로그램에 특수교육 학습자 56명이 참여함",
+      "미국 매디슨 RISE가 장애 학생 대상 진로·기술 교육 과정을 운영함",
+      "미국에서 특수교육 학생 맞춤형 통학 지원 MyVan 프로그램이 제공됨",
+      "미국에서 통합체육 교사가 주 올해의 교사로 선정됨, 바하마에서는 특수교육 교사 11명이 장학금을 받음"
+     ],
+     "implication": "장애 학생의 진로 연계, 통학 지원, 통합체육 운영 사례를 우리 학교 특수교육 지원 방식과 견주어 볼 만함",
+     "perspective": null,
+     "tags": [
+      "특수교육",
+      "해외사례",
+      "통합체육"
+     ],
+     "score": 58.4,
+     "score_parts": {
+      "확산도": 36.7,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 6.7
+     },
+     "streak_days": 6,
+     "source_count": 5,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "Cebu Daily News",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "싱가포르·아시아",
+       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQREZYeEhnaXZrS0FWQnJRWlNMSHkyczdXME1JckpWQ3pyUDlVX1VqeFVwNDBsZUZXVURWT2s0V0xHRlFzZVEwUUsxakEtXy15U1NkZkRobE9HWmU0MFFZRHN0WFR4WHhpOVJwWTEycHhKVzlaeTN6WlJheXNoYzFjRjBnSnhucEw3VV9URlBWS25JVGswc0thd1Brb9IBoAFBVV95cUxPSWJlWjNXWXBER29TXzgyN3BVU2hLbmd6Z0UwbUtQa2tGY3paTlVaMVUzTjF0TUM3YmtqeGI4anVLVFRvNUwwR0dEZmV5a1R6WDZaZGhMZ0Y0NVBoRkJxREQzeXFEMXQ3Qno5cTI0NHoteF8wZ3JVMEhEU040aG00Z2FKSHdpWEV4TkhWNDdtSVBrd25sMVQtZlJNYkpER01i?oc=5",
+       "title": "Jpark shares resort experience with 56 special needs learners in Mactan"
+      },
+      {
+       "source": "The First Bell",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTENBajJGVlQzb2tCalMyT1RSM2YzZFplQWppekszb3NtVXI5QlZWcnRhTkdWS29PZnhzblBNRXlyWkgxQU9DLUp4N0JkYTRyV21tZU13cTM0eGYtOGh2b0gwUTEtWmNKTkpWT0ZPbFJQYXBtakRibUxnUGE1R1U2eWc5VHMtX24xZjVfTDJJREdXbUhWOU03YktnLURsLVFCWW9DUw?oc=5",
+       "title": "Borg honored as state Adapted PE Teacher of the Year"
+      },
+      {
+       "source": "Richland Source",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMGhiRzk3UWpvckFQM09OWTE1S0d5Z1ZxZi1CT01KSWhxaERVWUgzNU5pNm1HZWdzbkFKT043WEJ6cng3SEJKRmxDMXdpZ2xsSkdsWlN4OEUxWWZSMXlKU0VBWFE2NXZ0dmxDOVVuTk5BSGEyMkQ1RDlyUjBtdFV4YTU3QjFBRjJJSnZxdEh6R054RHJxeG0zamRoazl6WGkxNnpJSTBCRTROZHdyZGp0UUJ3SQ?oc=5",
+       "title": "Madison RISE offers career-tech pathway for students with disabilities"
+      },
+      {
+       "source": "Spectrum News",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQXzQxRkt5eS1taVJ1a2xSeVdlcUFvTU1Pc3J6SlZqYWw2SGp0T1JHdy1HNHVXXzNjOUxlSEdCWGJyR0p4Nmd6Vmg0UlBwYWxUemZMbFp5YW9UV2w5SGdobFVDdXFDTi1QUjRac0dreFlJMEUwWFFWVU1nZGlKRS1TMFlsXzRqbFlRWnVWbmVCQThIajEzbzlSSg?oc=5",
+       "title": "MyVan program provides specialized student transportation"
+      },
+      {
+       "source": "Tribune 242",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "영국",
+       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOU0RXRHB1ZEd0ZG9kZGlvNXBHS1lodXpYdVhrMkh5ZUdnc012clVPSkRETGxnR0Uwc2wzT0RTRG1EN0NwVFhoWG1uRGUxRV9XLXgzdE1lMWQ4QTVvUE5hX1JqNjNXZFdqWnJJMk5jZ3FZNG1rYUx6bzBLRkhtWVZsUmJiMXNZVUFzNUVzODRVNHNiZkU1ZElwblpNRUdzZmZLT3JYZw?oc=5",
+       "title": "Eleven teachers awarded scholarships in special education"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-d23",
+     "region": "domestic",
+     "field": "특수교육·포용",
+     "title": "경북도의원 특수교육 지원체계 개선 촉구",
+     "summary": [
+      "김상희 경북도의원이 특수교육 지원체계 개선을 촉구함",
+      "통합학급 담임 90.9%가 담임 맡기를 기피한다고 지적함",
+      "통합학급 교사 부담 경감과 농산어촌 특수교육 확대를 요구함",
+      "교육발전특구를 통한 농산어촌 작은 학교 지원책 마련도 촉구함"
+     ],
+     "implication": "통합학급 담임의 업무 부담과 지원 인력·연수 현황을 점검하고 학교 차원의 지원 방안을 논의할 필요가 있음",
+     "perspective": null,
+     "tags": [
+      "통합학급",
+      "특수교육",
+      "농산어촌"
+     ],
+     "score": 53.0,
+     "score_parts": {
+      "확산도": 33.0,
+      "논조 폭": 0.0,
+      "지속성": 0,
+      "공식성": 0,
+      "현장 관련성": 20.0
+     },
+     "streak_days": 1,
+     "source_count": 4,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "이투데이",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE85a2oyTEo5SzhzMW9zT2tCcUs2M3h6d0dxcG1wVWYxVnRScnh5RFB5NTFLbVFCOTM4RnByR2NZNjVmcjV3d0hxNldESzltVlRxcjlRNA?oc=5",
+       "title": "김상희 경북도의원, 특수교육 사각지대·영양교사 전보 제한 질타"
+      },
+      {
+       "source": "데일리대구경북뉴스",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0tcWFlcXlaQ2lZS3FDc3MtUXZFYVVUc3RPVlRYN1M0NW11dHdjU2diQVBsaFhYVUYzcVdQMWdYMEdmVnU3WDBqd3czUGM2eFVLZGt6YWlDSk9VQm9jRDdQTWdWX3BtUQ?oc=5",
+       "title": "김상희 도의원, 교육발전특구 통한 농산어촌 작은 학교 지원책 마련 촉구"
+      },
+      {
+       "source": "아이뉴스24",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1HVHM1V1MzT2s2Q1g2TXRqTkd5Z3BMRGVFUkZuNVk3bGFhNzBlR0lLT3ZzSGtDb0RpM01hX2ptQjM2UWRDQUcyVkFZNUQ?oc=5",
+       "title": "김상희 경북도의원, 특수교육 지원체계 개선 촉구…“통합학급 담임 90.9% 기피”"
+      },
+      {
+       "source": "이데일리",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbENEWDFKM2dtMTVCQjlQNnV3OTdzd2dpZGxjXy1lSVFya2tPN1pIajEyY0VSQVlIMVN3VE45MGpKLU9IODdZQktPeGJ4dFBlSjZ5QXRyUFUwQVNQbmZOenJ5djdYSXNCQ0RCUW5CSzZEUGpsbVNycGktcDRWMS1JQg?oc=5",
+       "title": "김상희 경북도의원 “통합학급 교사 부담 줄이고 농산어촌 특수교육 확대해야”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "field": "사회·복지",
+   "issues": [
+    {
+     "key": "2026-11-11-d00",
+     "region": "domestic",
+     "field": "사회·복지",
+     "title": "2027 초등 입학생 30만 명 붕괴 전망",
+     "summary": [
+      "내년 초등 입학생이 사상 처음 30만 명에 못 미칠 전망임",
+      "60년 사이 입학생 규모가 4분의 1 수준으로 줄었다는 보도임",
+      "광주 도심 초등학교에서도 신입생 0명 사례가 나옴, 전남은 45곳임",
+      "학교 통폐합 문제가 쟁점으로 부상함"
+     ],
+     "implication": "학급 수·교원 수급 변화와 소규모 학교 운영, 통폐합 논의에 대비해 학교 단위 중장기 계획을 살펴볼 필요가 있음",
+     "perspective": "일부 매체는 저출생 충격과 입학생 수 감소 규모를, 지역 매체는 신입생 0명 학교와 통폐합 문제를 강조함",
+     "tags": [
+      "저출생",
+      "학령인구",
+      "통폐합"
+     ],
+     "score": 76.7,
+     "score_parts": {
+      "확산도": 36.7,
+      "논조 폭": 0.0,
+      "지속성": 10,
+      "공식성": 10,
+      "현장 관련성": 20.0
+     },
+     "streak_days": 3,
+     "source_count": 5,
+     "leans": [
+      "보수"
+     ],
+     "official": true,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "진일보 | 전남일보",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBmb0hGdk56SjZPWFhob0M5dzA1RXhuZ3o3Uk5Sa2FNMWFzbGpoUmgyZ0ZvQnBvYlFZdlpTTHJ6WmlpR25VaVJvZ0g2cWJuQzNnS3NQdUJ3R1dhRURsV3BTRUprZ0owU2NpcDlyNmlraw?oc=5",
+       "title": "광주 도심 초등학교도 신입생 '0명'…전남은 45곳, 학교 통폐합 딜레마"
+      },
+      {
+       "source": "시사매거진",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE96Rms4NWJFVmJUYXkyYjNkQ0tDR2t6TktrZkNiWUlJeF9JSE9NREJmSUZmNnNnTm5LTWxfX3doNmlJM2pMZjMyaHdtelltcGtjdzZrLXIwdzh1SkZZUkYybl93?oc=5",
+       "title": "초등학교 입학생 사상 첫 30만 명 붕괴 전망…저출생 충격 교육현장 덮친다"
+      },
+      {
+       "source": "트루스데일리",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5Iak4zcmVfRkt3UGd6b1hHdWx2U2t0QTFnd21nUi1RalFsM0hrdU95UGwtZ1dabmVTV3BxWTBIdkEwbWRMRHlFOUY4aDVwUmRDUk9KTFhvbU1STGN6aElWN1c2Z0JnX0p3WlV3WlZB?oc=5",
+       "title": "교실 채울 아이가 없다... 초등 입학생 사상 첫 20만명대"
+      },
+      {
+       "source": "문화일보",
+       "lean": "보수",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5lckdWbUJvY2V3emlGbk95clZodzlCMWZiQkkwZlJaVzlIaWlJUUpZNFFySFBwbndFQ1pCZUVNUWJkeXZXSjR6dWJkUFRaUmMt?oc=5",
+       "title": "“저출생 충격 현실화”내년 초등 입학생 사상 처음 30만명 미달…60년새 4분의 1로 축소"
+      },
+      {
+       "source": "산경일보",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9DdjkxYmptV2g2WThETENFSm1Ud3FyX2VSX3I2ZHV1QVlzdjRpdnFtd0dxOS1ic081bC05c0kzM2FZS3VlRkV1RjNaaEhqX3hvR0I5N0hzX09EWjhwdFRHX3c2YnBfdXlnV1R1Z0RXdVE?oc=5",
+       "title": "초등학교 입학생 20만 명 시대 충격, ‘백년대계’ 교육·인구 정책의 판 새로 짜야"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-d47",
+     "region": "domestic",
+     "field": "사회·복지",
+     "title": "통학로·아동보호구역 안전",
+     "summary": [
+      "청송교육지원청이 안전한 등굣길 및 인구교육 캠페인을 실시함",
+      "서울 영등포구가 초등학교·유치원 통학로 9곳에 보도를 신설·확장함",
+      "인천 강화군이 관내 초등학교 20곳 모두를 아동보호구역으로 지정 추진함"
+     ],
+     "implication": "학교 주변 통학로 위험 요소를 점검해 지자체에 개선을 건의하고 등하교 안전지도를 보완할 필요가 있음",
+     "perspective": null,
+     "tags": [
+      "통학로",
+      "아동보호구역",
+      "학교안전"
+     ],
+     "score": 56.7,
+     "score_parts": {
+      "확산도": 28.4,
+      "논조 폭": 0.0,
+      "지속성": 15,
+      "공식성": 0,
+      "현장 관련성": 13.3
+     },
+     "streak_days": 5,
+     "source_count": 3,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "광흥타임즈",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5OUThMSVhIUm1leXUxTFdZbHRmLXVpVDBaTG1JWWRrUENkeERMZV95ZnFPTUduYXhWSzJVaGdneENHX1N5MXQ2a2tuc3U3Z2xKS2pCZ25xUmxkUlpZdFlB?oc=5",
+       "title": "청송교육지원청, 안전한 등굣길 및 인구교육 캠페인 실시"
+      },
+      {
+       "source": "오늘뉴스",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFB1SGlIbUpkbGZCTzR3Wk1WdUxxWmt2ajZsOXdoRHdjWVpEWWhZZmlPSkFQMzh2RzNxZWtIZGk0cFNjVWgx?oc=5",
+       "title": "영등포구, 초등학교·유치원 등 통학로 9곳 개선…보도 신설·확장"
+      },
+      {
+       "source": "인천교육일보",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "한국",
+       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CckE3NlRzNzVhdTJVZkZqS2FJUUp6RkJ5WXVNUURsRXlrRE5OWDdzRmdOb1hDelRmTnpCZS1ScXFqVzJ0VTRUaFJMNXNCVlJKaWliRHFBWUxaZTJzbUpuLUY5Y2VMa3Fn?oc=5",
+       "title": "강화군, 관내 초등학교 20개소 모두 아동보호구역 지정 추진"
+      }
+     ]
+    },
+    {
+     "key": "2026-11-11-g38",
+     "region": "global",
+     "field": "사회·복지",
+     "title": "영국 아동 빈곤 지원 동향(웨일스 수당·자선)",
+     "summary": [
+      "영국 정부가 웨일스의 주당 10파운드 아동 빈곤 수당 시범사업 검토에 열린 입장을 보임",
+      "DFS와 BBC Children in Need가 가구 빈곤 문제를 알리는 협력 활동을 진행함",
+      "잉글랜드 북동부 자선단체가 1,500파운드를 지원받아 빈곤 아동 167명에게 생필품을 제공함"
+     ],
+     "implication": "아동 빈곤이 가구·생필품 등 생활 전반의 문제임을 고려해 교내 취약 학생 파악과 지원 연계 체계를 점검할 필요가 있음",
+     "perspective": null,
+     "tags": [
+      "아동빈곤",
+      "영국",
+      "복지지원"
+     ],
+     "score": 46.7,
+     "score_parts": {
+      "확산도": 28.4,
+      "논조 폭": 0.0,
+      "지속성": 5,
+      "공식성": 0,
+      "현장 관련성": 13.3
+     },
+     "streak_days": 2,
+     "source_count": 3,
+     "leans": [],
+     "official": false,
+     "title_only": true,
+     "sources": [
+      {
+       "source": "The Northern Echo",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "영국",
+       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUXQ5cVdPNnZPb19wZ0JueHcxV1RGbjljYzhoTXB4QTVteC1KSUFvczc1VWU1c0hvM1l1UUhBYXhGSlpPRENTQUdjbFlJSTdCb01JQ0JEYy1vVlF3QlRvYWZ5MHVLLUNlUHNNaGN4akVnMlU1LVdIRzNxZXFrdG82WWt4ckVvNkF1XzNxSFZwVkFLZ3F0ZTJiQmVxdVBoUkdNNXo3Zg?oc=5",
+       "title": "North East charity gets £1,500 to provide essentials for 167 children in poverty"
+      },
+      {
+       "source": "South Wales Argus",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMmdNS2Y0X3hlYjFGNWVwWGt1OXY5THpieFdudGtmajNYZGRLRjFldlVQM3JfeThCUzlzc3l3VU5ia202THRqOFdWbzdENTF3bVF3LVNtLXVia0N6cXAtazV0S3NWVTA2SlF6dEFRTTZNcDhMNVE5TXZnSlh5Qm15ckZCSHVFM29rTHZ1MlZZXzF6enBqMUNmV1lXQU9tREpsQjdSWkFVYw?oc=5",
+       "title": "UK Government open to exploring £10-a-week Welsh child poverty payment pilot"
+      },
+      {
+       "source": "Smiley Movement",
+       "lean": "미분류",
+       "type": "언론",
+       "country": "미국",
+       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE42TzR4dGZpMmxPTFE3S19OcUdrUXhPQlZqOUJuMWJiajJYak5VR3BOWkdXOW5rM0UyNDQ1UFVZa3lDeEhMRElDbS1oVEI4NWU4dkgzYXFpbXhLbUlqYkZyMjJXMUhtZW9VMnZ1ZWlYMjRGb19XQk1sb2FnUmhYUQ?oc=5",
+       "title": "DFS and BBC Children in Need Shine a Light on Furniture Poverty"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "key": "2026-11-11-g00",
+   "label": "구글 AI 검색 강제 논란과 마키 의원 압박",
+   "region": "global",
+   "streak_days": 8
+  },
+  {
+   "key": "2026-11-11-g09",
+   "label": "AI 교육 도입 확대와 지침·교사 연수",
+   "region": "global",
+   "streak_days": 6
+  },
+  {
+   "key": "2026-11-11-g28",
+   "label": "교사 인력 확보·양성·멘토링",
+   "region": "global",
+   "streak_days": 6
+  },
+  {
+   "key": "2026-11-11-d00",
+   "label": "2027 초등 입학생 30만 명 붕괴 전망",
+   "region": "domestic",
+   "streak_days": 3
+  },
+  {
+   "key": "2026-11-11-d08",
+   "label": "세종교육청 2027 본예산 편성",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g01",
+   "label": "영국 학교 가방·주머니 휴대전화 금지(2027.9)",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d03",
+   "label": "교육부 학생 마음건강 안전망 강화",
+   "region": "domestic",
+   "streak_days": 3
+  },
+  {
+   "key": "2026-11-11-d22",
+   "label": "경북도의회 교육청 행정사무감사",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d02",
+   "label": "수능 스마트안경 부정행위 대응",
+   "region": "domestic",
+   "streak_days": 4
+  },
+  {
+   "key": "2026-11-11-d28",
+   "label": "특수교육대상 학생 체험·스포츠 프로그램",
+   "region": "domestic",
+   "streak_days": 7
+  },
+  {
+   "key": "2026-11-11-g25",
+   "label": "美 주·지역 교육재정 개편 논의",
+   "region": "global",
+   "streak_days": 7
+  },
+  {
+   "key": "2026-11-11-g10",
+   "label": "교실 AI 활용 교사 반응과 신중론",
+   "region": "global",
+   "streak_days": 5
+  },
+  {
+   "key": "2026-11-11-d42",
+   "label": "주민·직장인 대상 AI 활용 교육",
+   "region": "domestic",
+   "streak_days": 7
+  },
+  {
+   "key": "2026-11-11-d09",
+   "label": "교육혁신선도지역 지정",
+   "region": "domestic",
+   "streak_days": 8
+  },
+  {
+   "key": "2026-11-11-d01",
+   "label": "국교위 초등 3시 하교 철회",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g23",
+   "label": "특수교육 소규모 소식",
+   "region": "global",
+   "streak_days": 6
+  },
+  {
+   "key": "2026-11-11-d24",
+   "label": "대구시의회 교육청 행정감사",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d13",
+   "label": "경기도의회 김선희 의원 교권·학폭 대응 지적",
+   "region": "domestic",
+   "streak_days": 4
+  },
+  {
+   "key": "2026-11-11-d11",
+   "label": "서울시의회 학폭 피해학생 전학 지원 강화",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d14",
+   "label": "학교폭력 예방 캠페인 확산",
+   "region": "domestic",
+   "streak_days": 7
+  },
+  {
+   "key": "2026-11-11-d47",
+   "label": "통학로·아동보호구역 안전",
+   "region": "domestic",
+   "streak_days": 5
+  },
+  {
+   "key": "2026-11-11-g33",
+   "label": "美 선거 후 텍사스 교육위·교육부 전망",
+   "region": "global",
+   "streak_days": 8
+  },
+  {
+   "key": "2026-11-11-g35",
+   "label": "학생 정신건강 지원 프로그램",
+   "region": "global",
+   "streak_days": 5
+  },
+  {
+   "key": "2026-11-11-g34",
+   "label": "대학 정신건강 활동·캠퍼스 비극",
+   "region": "global",
+   "streak_days": 6
+  },
+  {
+   "key": "2026-11-11-d43",
+   "label": "대학 AI 교육혁신·협력",
+   "region": "domestic",
+   "streak_days": 3
+  },
+  {
+   "key": "2026-11-11-d23",
+   "label": "경북도의원 특수교육 지원체계 개선 촉구",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d32",
+   "label": "유치원 범죄경력 조회·사교육비 조사 법제화",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g11",
+   "label": "사우스포틀랜드 AI 금지안 부결",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d16",
+   "label": "대전 학교폭력 신고 현황·중학생 피해",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d19",
+   "label": "교육활동 보호 4대 입법과제 토론회",
+   "region": "domestic",
+   "streak_days": 4
+  },
+  {
+   "key": "2026-11-11-g31",
+   "label": "영국 오프스테드 개편에 교장 이탈 우려",
+   "region": "global",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d25",
+   "label": "전북도의회 교육청 행정사무감사",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g13",
+   "label": "AI 챗봇에 정서 의존하는 학생들",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g30",
+   "label": "교사 표창·지원금 소식",
+   "region": "global",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d15",
+   "label": "학교폭력 갈등 중재·관계조정 프로그램",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d04",
+   "label": "청소년 SNS 과의존·정신건강",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-g38",
+   "label": "영국 아동 빈곤 지원(웨일스 수당·자선)",
+   "region": "global",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-g07",
+   "label": "프랑스 학생·교사 교육예산 항의 시위",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g12",
+   "label": "웨일스 전직 교장 AI 안전 수업 자료 배포",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d33",
+   "label": "외국대학 교원 국내대학 겸직 허용",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d34",
+   "label": "학교 급식 조리종사자 적정 인원 논란",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d40",
+   "label": "경기도 AI 교육 전환·사고력 보전",
+   "region": "domestic",
+   "streak_days": 3
+  },
+  {
+   "key": "2026-11-11-d10",
+   "label": "경기도의회 학폭 피해학생 보호 사각지대 지적",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d27",
+   "label": "충남교육청 정책 실효성 질타",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g04",
+   "label": "베트남 학교 스마트폰 관리와 디지털 교육",
+   "region": "global",
+   "streak_days": 6
+  },
+  {
+   "key": "2026-11-11-g15",
+   "label": "미시간 특수교육 개혁 요구",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g16",
+   "label": "특수교육 재정 부담 논의(오리건·플리머스)",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g18",
+   "label": "앨빈 교육구 특수학생 부적절 대응 의혹",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g21",
+   "label": "영국 SEN 시설 확충 투자",
+   "region": "global",
+   "streak_days": 6
+  },
+  {
+   "key": "2026-11-11-d37",
+   "label": "서울 교육균형발전지수 도입 촉구",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g20",
+   "label": "아일랜드·키프로스 특수학교 확충과 대기",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g22",
+   "label": "영국 장애 아동 복지 삭감 논란",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g29",
+   "label": "교사 임금·파업 관련 소식",
+   "region": "global",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d30",
+   "label": "경기도의회 특수교육·특수학급 지적",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d35",
+   "label": "서울교육청 기본교육 정책",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d36",
+   "label": "위탁 어린이집 경력 불인정 인권위 권고 거부",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d51",
+   "label": "울산교육청 교육공무직 채용 경쟁률",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g06",
+   "label": "베트남 교외 보충교육 통지 85호 시행난",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g46",
+   "label": "한국 경기교육감 선거 투표지 위조 의혹",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g47",
+   "label": "LGBTQ 깃발 교사 소송 판결",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g48",
+   "label": "남아공 BELA 정책 검토 요구",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d18",
+   "label": "장난으로 포장된 학교폭력 기고",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d26",
+   "label": "전북교육기록원 백지화 논란",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d29",
+   "label": "충주 특수교육 학부모 토크콘서트",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g08",
+   "label": "스페인 교육 노조 총파업",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g37",
+   "label": "네덜란드 교사용 아동학대 식별 툴킷",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d38",
+   "label": "SK이노 행복드림 도서관 농어촌 교육격차",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d39",
+   "label": "태광 일주재단 그룹홈 아동 교육격차 지원",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g45",
+   "label": "UNESCO STEM·협력 소식",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d12",
+   "label": "학교폭력 담당 업무 개선 촉구",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d21",
+   "label": "교원 갑질 경험 실태",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d31",
+   "label": "전북 특수교사 부족 대책 촉구",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g19",
+   "label": "특수학급 대안학교 이전 학부모 반발",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-d20",
+   "label": "교권 회복 칼럼",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d41",
+   "label": "대학의 중학생 생성형 AI 교육",
+   "region": "domestic",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-g26",
+   "label": "美 학교 폐쇄 현황 보도",
+   "region": "global",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-g39",
+   "label": "영국 학교 급식비 인상",
+   "region": "global",
+   "streak_days": 2
+  },
+  {
+   "key": "2026-11-11-d52",
+   "label": "서울대 10개 만들기 탈락 컨설팅",
+   "region": "domestic",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g36",
+   "label": "인도 오디샤 대학 정신건강센터 의무화",
+   "region": "global",
+   "streak_days": 1
+  },
+  {
+   "key": "2026-11-11-g41",
+   "label": "EU 1240억 유로 기술·아동 우선 계획",
+   "region": "global",
+   "streak_days": 1
+  }
+ ]
+}
