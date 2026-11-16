@@ -255,6 +255,7 @@ def collect_all(cfg: dict, until: datetime | None = None) -> tuple[list[dict], l
         arts = [a for a in arts if a["published"] and datetime.fromisoformat(a["published"]) <= end_iso]
     arts = dedupe(arts, cfg.get("exclude_keywords", []))
     cap = cfg["diversity"].get("max_articles_per_region", 220)
-    dom = balance_cap([a for a in arts if a["region"] == "domestic"], cap)
+    dom_cap = cfg["diversity"].get("max_articles_domestic", cap)
+    dom = balance_cap([a for a in arts if a["region"] == "domestic"], dom_cap)
     glo = balance_cap([a for a in arts if a["region"] == "global"], cap)
     return dom + glo, failures

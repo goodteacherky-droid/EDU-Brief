@@ -11,7 +11,7 @@ site:
 # Claude 모델 (요약·이슈 묶기에 사용)
 model: "claude-sonnet-5-5"
 
-# 몇 시간 이내 기사를 모을지 (새벽 4시 실행 기준, 전날 오전부터)
+# 몇 시간 이내 기사를 모을지 (자정 실행 기준, 전날 새벽부터)
 window_hours: 30
 
 # ── 분야 ──────────────────────────────────────────────────────
@@ -34,11 +34,13 @@ fields:
 diversity:
   top_issues: 3                 # 맨 위 「오늘의 핵심 이슈」 개수
   top_min_global: 1             # 핵심 이슈 중 해외 이슈 최소 개수
-  per_field: 3                  # 분야별로 보여 줄 최대 이슈 수
-  max_total: 21                 # 하루 브리핑 전체 이슈 상한
-  global_share_min: 0.35        # 전체 이슈 중 해외 비율 최소값
+  per_field: 4                  # 분야별로 보여 줄 최대 이슈 수
+  max_total: 26                 # 하루 브리핑 전체 이슈 상한
+  global_share_min: 0.25        # 전체 이슈 중 해외 비율 최소값
+  domestic_share_min: 0.6       # 전체 이슈 중 국내 비율 최소값
   single_source_cap: 2          # 한 매체만 보도한 이슈는 같은 매체에서 최대 몇 건
-  max_articles_per_region: 160  # Claude에게 넘기는 기사 상한(비용·분당 한도 관리)
+  max_articles_per_region: 160  # Claude에게 넘기는 해외 기사 상한(비용·분당 한도 관리)
+  max_articles_domestic: 260    # Claude에게 넘기는 국내 기사 상한(국내 비중 확대)
 
 # ── 이슈도 점수 가중치 (합계 100점 기준) ─────────────────────
 scoring:
@@ -48,6 +50,10 @@ scoring:
   streak: 15       # 지속성: 며칠째 이어지는 이슈 (하루당 5점)
   official: 10     # 정부 발표·법안·판결 등 제도 변화
   relevance: 20    # 학교 현장 관련성 (Claude가 1~3단계로 판단)
+  priority: 12     # 주요 기관 가산점: 아래 priority_keywords가 기사 제목·요지에 나오면 더함
+
+# 우선 다룰 기관 — 이 말이 들어간 사안은 가산점(scoring.priority)을 받음
+priority_keywords: ["교육부", "경기도교육청", "경기교육청", "경기도교육감", "경기교육"]
 
 # ── 수집 출처 ─────────────────────────────────────────────────
 #  type: 언론 / 교육전문지 / 공공기관 / 연구·국제기구
@@ -61,7 +67,16 @@ google_news:
     ceid: "KR:ko"
     queries:
       - "교육부"
+      - "교육부 발표"
+      - "교육부 장관"
+      - "교육부 정책 학교"
+      - "경기도교육청"
+      - "경기도교육감"
+      - "경기교육"
+      - "경기도교육청 학교"
       - "교육청 정책"
+      - "교사 교원"
+      - "교육과정 수업"
       - "초등학교"
       - "교권 학생인권"
       - "학교폭력"
@@ -102,7 +117,7 @@ rss:
 
 # 3) 네이버 뉴스 검색 API (선택) — 열쇠를 등록하면 자동으로 켜집니다.
 naver:
-  queries: ["교육부", "초등 교사", "학생인권", "AI 교육", "특수교육", "청소년"]
+  queries: ["교육부", "교육부 발표", "경기도교육청", "경기교육", "초등 교사", "학생인권", "AI 교육", "특수교육", "청소년"]
   per_query_limit: 30
 
 # ── 매체 성향·유형 사전 ───────────────────────────────────────
@@ -130,6 +145,9 @@ outlets:
   - { name: "서울신문", lean: "중도", type: "언론", domains: ["seoul.co.kr"] }
   - { name: "경기일보", lean: "중도", type: "언론", domains: ["kyeonggi.com"] }
   - { name: "경인일보", lean: "중도", type: "언론", domains: ["kyeongin.com"] }
+  - { name: "중부일보", lean: "중도", type: "언론", domains: ["joongboo.com"] }
+  - { name: "기호일보", lean: "중도", type: "언론", domains: ["kihoilbo.co.kr"] }
+  - { name: "경기신문", lean: "중도", type: "언론", domains: ["kgnews.co.kr"] }
   # 국내 — 보수 성향
   - { name: "조선일보", lean: "보수", type: "언론", domains: ["chosun.com"] }
   - { name: "중앙일보", lean: "보수", type: "언론", domains: ["joongang.co.kr"] }

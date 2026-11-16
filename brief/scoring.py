@@ -21,7 +21,14 @@ def score_cluster(c: dict, arts: dict, cfg: dict, prev_streaks: dict) -> dict:
     official = w["official"] if c.get("official_action") else 0
     relevance = w["relevance"] * (int(c.get("school_relevance", 2)) / 3)
 
+    # 주요 기관(교육부·경기도교육청 등) 가산점
+    kws = cfg.get("priority_keywords", [])
+    text = " ".join(f"{a['title']} {a.get('snippet', '')}" for a in members) + " " + c.get("label", "")
+    priority = w.get("priority", 0) if any(k in text for k in kws) else 0
+
     parts = {"확산도": spread, "논조 폭": balance, "지속성": streak, "공식성": official, "현장 관련성": relevance}
+    if priority:
+        parts["주요 기관"] = priority
     c["score"] = round(sum(parts.values()), 1)
     c["score_parts"] = {k: round(v, 1) for k, v in parts.items()}
     c["streak_days"] = streak_days
@@ -72,6 +79,13 @@ def select(clusters: list[dict], arts: dict, cfg: dict) -> tuple[list[dict], dic
         if can_take(c):
             global_in_field[c["field"]] = global_in_field.get(c["field"], 0) + 1
             chosen.append(c); per_field[c["field"]] = per_field.get(c["field"], 0) + 1; need_global -= 1
+    # 국내 몫 확보(국내 비율 하한)
+    need_dom = max(0, math.ceil(d.get("domestic_share_min", 0) * d["max_total"]) - sum(c["region"] == "domestic" for c in top))
+    for c in [x for x in remaining if x["region"] == "domestic"]:
+        if need_dom <= 0:
+            break
+        if c not in chosen and can_take(c):
+            chosen.append(c); per_field[c["field"]] = per_field.get(c["field"], 0) + 1; need_dom -= 1
     for c in remaining:                                             # 나머지는 점수 순
         if c not in chosen and can_take(c):
             chosen.append(c); per_field[c["field"]] = per_field.get(c["field"], 0) + 1
